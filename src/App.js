@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './assets/css/bootstrap.min.css'
 import './App.css';
+import './assets/css/style.css'
+import './assets/css/responsive.css'
+import { Home } from './Pages/Home';
+import { Header } from "./components/Header";
+import { ArtInfo } from "./components/ArtInfo";
 
-function App() {
+function App() { 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        {/* Place Header outside of Routes */}
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/art-inner-page/:id" element={<ArtInfo />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

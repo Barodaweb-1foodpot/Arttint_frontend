@@ -1,0 +1,249 @@
+
+@font-face {
+    font-family: 'AcryleScript'; /* Specify the desired font family name */
+    src: url('../../../public/AcryleScript_PersonalUse.ttf') format('truetype'); /* Path to your .woff font file */
+    /* src: url('../../../public/Angelyta.otf') format('opentype');  */
+  }
+  
+  @font-face {
+    font-family: 'Impact';
+    src: url('../../../public/impact.ttf') format('truetype');
+  }
+  
+.header{
+    padding:10px;
+    background-color: #fff;
+    height: 15vh;
+    align-content: center;
+}
+.header-logo {
+align-items: center;
+}
+.logo-left {
+    display: flex;
+    align-items: center;
+}
+.logo-left img{
+    max-height: 60px;
+}
+
+.logo-right {
+    display: flex;
+    gap: 30px;
+}
+
+.logo-right img{
+    max-height: 70px;
+}
+
+.main-img{
+    background-image: url(../img/bg-wall.jpg);
+    background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 85vh;
+  padding: 0 0 40px 0;
+  background-position: 0  -20px;
+  position: relative;
+}
+
+.wall-img {
+    padding-top: 28px;
+}
+
+.pers-one{
+    transform: perspective(1100px) scale(0.9) translateX(-1%) rotateY(35deg);
+    padding-top: 90px;
+}
+
+.wall-img img {
+    box-shadow: -4px 3px 6px 0px #000;
+}
+.wall-img .img-link img{
+    transition: all 0.2s ease-in;
+}
+.wall-img .img-link:hover img {
+    transform: scale(1.07);
+}
+.big-img{
+    height: 100%;
+    padding-top: 20px;
+}
+.big-img img {
+    box-shadow: -4px 3px 6px 0px #000;
+    height: 100%;
+    object-fit: cover;
+}
+
+.big-img .img-link img{
+    transition: all 0.2s ease-in;
+    
+}
+.big-img .img-link:hover img {
+    transform: scale(1.03);
+}
+.banner-text{
+    position: relative;
+    margin-top: 100px;
+}
+.banner-text h3{
+    font-family: impact;
+    letter-spacing: 4px;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 60px;
+    color: #000;
+}
+
+.banner-text h4 {
+    color: #fff;
+    font-family: AcryleScript;
+    font-weight: 400;
+    font-size: 40px;
+    position: absolute;
+    top: 20%;
+    left: 15%;
+}
+
+.banner-text p{
+    margin-top: 30px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000;
+}
+
+.note {
+    margin-top: 125px;
+    background: #000;
+    position: relative;
+    left: -19px;
+    padding: 4px 23px;
+    border-radius: 5px;
+    height: fit-content;
+}
+
+.note h4{
+    color: #fff;
+    font-size: 18px;
+    padding: 4px 0;
+    margin-bottom: 0;
+}
+
+p.detail {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+}
+
+.dark-bg{
+    background-color: #000;
+}
+.inner-heading{
+    position: relative;
+}
+.inner-heading h3 {
+    font-family: impact;
+    letter-spacing: 3px;
+    font-weight: 600;
+    font-size: 31px;
+    line-height: 41px;
+    color: #313131;
+}
+.inner-heading h4 {
+    color: #fff;
+    font-family: AcryleScript;
+    font-weight: 400;
+    font-size: 30px;
+    position: absolute;
+    top: 15%;
+    left: 12%;
+}
+.inner-heading p{
+    margin-top: 30px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000;
+}
+
+.inner-padding{
+    padding: 20px 0;
+    height: 85vh;
+}
+
+.text-area{
+    color: #f9f9f9;
+    position: relative;
+}
+
+.text-area .heading h4{
+    font-weight: 500;
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+.text-area .heading h4 span{
+    color: #fff;
+    font-weight: 700;
+}
+.text-area .sub-heading{
+    font-size: 20px;
+    font-style: italic;
+    margin-bottom: 0;
+}
+
+.text-area p{
+    margin-bottom: 0;
+    font-size: 12px;
+}
+
+.text-area .price{
+    margin-top: 20px;
+}
+.text-area .price h4{
+    font-size: 18px;
+}
+.text-area .price .btn-buy {
+    padding: 2px 40px 2px 5px;
+    background: #333;
+    font-size: 18px;
+    border-radius: 5px;
+    font-weight: 600;
+    border: 0;
+    color: #fff;
+}
+
+ .bottom-txt{
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    padding: 20px 0;
+}
+
+.bottom-txt hr{
+    margin: 5px 0;
+}
+.bottom-txt table tr td:first-child{
+padding-right: 20px;
+}
+.bottom-txt table td {
+    font-size: 12px;
+    line-height: normal;
+    padding-bottom: 0;
+}
+.vid-sec{
+    position: relative;
+    height: 100%;
+}
+
+.vid-sec .videos{
+    position: absolute;
+    bottom: 0;
+}
+
+.resp-height{
+    height: 100%;
+}
