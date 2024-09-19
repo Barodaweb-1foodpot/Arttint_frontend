@@ -12,6 +12,7 @@ export const Home = () => {
     const [leftWallData, setLeftWallData] = useState([])
     const [rightWallData, setRightWallData] = useState([])
     const [bigImageData, setBigImageData] = useState([])
+    const [RightWallbigImageData, setrightWallBigImageData] = useState([])
 
     useEffect(() => {
         fetchData()
@@ -23,10 +24,13 @@ export const Home = () => {
         const temp = res.data.filter((item => item.category === 'leftsidewall'))
         const temp2 = res.data.filter((item => item.category === 'bigImage'))
         const temp3 = res.data.filter((item => item.category === 'rightsidewall'))
+        const temp4 = res.data.filter((item => item.category === 'rightsidewallBigImage'))
+
         console.log(temp)
         setBigImageData(temp2)
         setLeftWallData(temp)
         setRightWallData(temp3)
+        setrightWallBigImageData(temp4)
     }
     const sideWall = [
         {
@@ -96,7 +100,7 @@ export const Home = () => {
                                     bigImageData.slice(0, 1).map((items, index) => (
                                         <div className="col-lg-4 col-12" key={index}>
                                             <div className="wall-img-big big-img" >
-                                            <Link to={`/${items.URL}`} className="img-link">
+                                            <Link to={`/${items.URL_link}`} className="img-link">
                                                     <img src={`${process.env.REACT_APP_URL}/${items.artImage}`} className="w-100" alt="" />
                                                     </Link>
                                             </div>
@@ -109,7 +113,7 @@ export const Home = () => {
                         </div>
                         <div className="col-lg-1 col-12">
                 <div className="row padding-lg-screen pers-two">
-                    {sideWall.map((item, index)=> (
+                    {/* {sideWall.map((item, index)=> (
                         <div className="col-lg-12" key={index}>
                         <div className="side-img-sm">
                             <Link to="/" className="img-link">
@@ -117,18 +121,46 @@ export const Home = () => {
                             </Link>
                         </div>
                     </div>
-                    ))}
+                    ))} */}
+                     {rightWallData.length > 0 &&
+                                    rightWallData.slice(0, 4).map((items, index) => (
+                                        <div className="col-lg-12" key={index}>
+                                            <div className="side-img-sm" >
+                                            <Link to={`/${items.URL_link}`} className="img-link">
+                                                    <img src={`${process.env.REACT_APP_URL}/${items.artImage}`} className="w-100" alt="" />
+                                                    </Link>
+                                            </div>
+                                        </div>
+
+                                    ))
+                                }
+                                  {/* {rightWallData.length > 0 &&
+                                    rightWallData.slice(0, 4).map((items, index) => (
+                                        <div className="col-lg-12" key={index}>
+                                            <div className="side-img-sm" >
+                                            <Link to={`/${items.URL}`} className="img-link">
+                                                    <img src={`${process.env.REACT_APP_URL}/${items.artImage}`} className="w-100" alt="" />
+                                                    </Link>
+                                            </div>
+                                        </div>
+
+                                    ))
+                                } */}
                 </div>
             </div>
             <div className="col-lg-2 col-12">
                 <div className="row padding-lg-screen pers-three">
-                    <div className="col-lg-12">
+                {RightWallbigImageData.length > 0 &&
+                                    RightWallbigImageData.slice(0, 1).map((items, index) => (
+                   <div className="col-lg-12">
                         <div className="wall-img">
-                            <Link to="/" className="img-link">
-                                <img src={artImg10} className="w-100" alt=""/>
+                            <Link to={`/${items.URL_link}`} className="img-link">
+                                <img src={`${process.env.REACT_APP_URL}/${items.artImage}`} className="w-100" alt=""/>
                             </Link>
                         </div>
-                    </div>
+                    </div> 
+                     ))
+                    }
                 </div>
             </div>
                     </div>
