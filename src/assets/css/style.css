@@ -9,8 +9,7 @@
     font-family: 'Impact';
     src: url('../../../public/impact.ttf') format('truetype');
   }
-  
-.header{
+  .header{
     padding:10px;
     background-color: #fff;
     height: 15vh;
@@ -212,8 +211,8 @@ p.detail {
     font-size: 18px;
     border-radius: 5px;
     font-weight: 600;
-    border: 0;
     color: #fff;
+    border: 0;
 }
 
  .bottom-txt{
@@ -246,4 +245,34 @@ padding-right: 20px;
 
 .resp-height{
     height: 100%;
+}
+
+.pers-two {
+    transform:perspective(1100px) scaleX(0.695) scaleY(0.57) translateX(-230%) rotateY(-35deg);
+    padding-top: 60px;
+}
+
+.side-img-sm{
+    padding-top: 20px;
+}
+.side-img-sm img {
+    box-shadow: 4px 3px 6px 0px #000;
+    transition: all 0.2s ease-in;
+}
+
+.side-img-sm:hover img {
+    transform: scale(1.07);
+}
+
+.pers-three{
+    transform: perspective(1136px) scaleX(0.23) scaleY(0.55) translateX(-1160px) rotateY(58deg);
+    padding-top: 125px;
+}
+
+.pers-three .wall-img img {
+    box-shadow: -7px 5px 6px 0px #000;
+}
+
+.pers-three .wall-img .img-link:hover img {
+    transform: scale(1.05);
 }
