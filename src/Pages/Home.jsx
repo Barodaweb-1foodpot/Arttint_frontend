@@ -80,7 +80,7 @@ export const Home = () => {
                                             leftWallData.slice(0, 26).map((items, index) => (
                                                
                                                 <div className="col-lg-2 flex-column wall-img mb-2" key={index} >
-                                                    <Link to={`/art-inner-page/${items._id}`} className="img-link">
+                                                    <Link to={`/${items.URL}`} className="img-link">
                                                     <img src={`${process.env.REACT_APP_URL}/${items.artImage}`} className="w-100" alt="" />
                                                     </Link>
                                                 </div>
@@ -102,7 +102,7 @@ export const Home = () => {
                                     bigImageData.slice(0, 1).map((items, index) => (
                                         <div className="col-lg-4 col-12" key={index}>
                                             <div className="wall-img-big big-img" >
-                                            <Link to={`/art-inner-page/${items._id}`} className="img-link">
+                                            <Link to={`/${items.URL}`} className="img-link">
                                                     <img src={`${process.env.REACT_APP_URL}/${items.artImage}`} className="w-100" alt="" />
                                                     </Link>
                                             </div>

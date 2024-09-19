@@ -7,16 +7,16 @@ import { useParams } from "react-router-dom";
 import img1 from '../assets/img/art-img/18_RahulMukharjee.jpg'
 
 export const ArtInfo = () => {
-  const { id } = useParams();
+  const { url } = useParams();
   const [data, setData] = useState({})
 
   useEffect(() => {
-    console.log(id);
+    console.log(url);
     fetchData()
-  }, [id]);
+  }, [url]);
 
   const fetchData =async()=>{
-    const res = await axios.get(`${process.env.REACT_APP_URL}/api/auth/get/ArtPiece/${id}`)
+    const res = await axios.get(`${process.env.REACT_APP_URL}/api/auth/get/ArtPieceByURL/${url}`)
     console.log(res)
     setData(res.data)
   }
@@ -60,9 +60,8 @@ export const ArtInfo = () => {
                    <div className="p-relative">
                      <div className="text-area">
                        <div className="heading">
-                         <h4>
-                           <span>{data.artistName} </span> 
-                         </h4>
+                       <h4><span>{data.artistName} </span> {data.artistLastName}</h4>
+                         
                        </div>
                        <h5 className="sub-heading">
                          <i>{data.artName}</i>, {data.year}
@@ -123,21 +122,7 @@ export const ArtInfo = () => {
                       </div>
                       }
                          
-                         {data.link2 !="" && 
-                        <div className="col-lg-12">
-                        <h6 className="text-white">Video - About Artwork</h6>
-                        <iframe
-                          width="100%"
-                          height="170"
-                          src={data.link2}
-                          title="Dummy Video For Website"
-                          frameBorder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                          referrerPolicy="strict-origin-when-cross-origin"
-                          allowFullScreen
-                        ></iframe>
-                      </div>
-                      }
+                         
                        </div>
                      </div>
                    </div>
