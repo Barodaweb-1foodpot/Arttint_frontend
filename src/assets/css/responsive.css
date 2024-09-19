@@ -182,7 +182,7 @@
 
 @media  (min-width: 1241px) and (max-width:1440px){
     .pers-one{
-        transform: perspective(1100px) scale(0.8) translateX(0%) rotateY(35deg);
+        transform: perspective(1100px) scale(0.9) translateX(0%) rotateY(35deg);
     }
 }
 
@@ -190,9 +190,9 @@
     .main-img {
         background-position: 0  -100px;
     }
-    .pers-one {
-        transform: perspective(1105px) scale(0.76) translateX(2%) rotateY(24deg);
-        padding-top: 30px;
+    .pers-one{
+        transform: perspective(1105px) scale(0.8) translateX(2%) rotateY(24deg);
+        padding-top: 100px;
     }
     .banner-text h3 {
         font-size: 56px;
