@@ -1,20 +1,13 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios'
 import { Link } from "react-router-dom";
-import artImg1 from "../assets/img/art-img/1_PrajjwalChoudhury.jpg";
-import artImg2 from "../assets/img/art-img/2_UdayMondal.jpg";
-import artImg3 from "../assets/img/art-img/3_BalajiPonna.jpg";
-import artImg4 from "../assets/img/art-img/4_NimeshPatel.jpg";
-import artImg5 from "../assets/img/art-img/25_uaymondalBig.jpg";
-import artImg6 from "../assets/img/art-img/26_NikunjPatel.jpg";
-import artImg7 from "../assets/img/art-img/27_HeeralTrivedi1.jpg";
-import artImg8 from "../assets/img/art-img/28_Heeral Trivedi2.jpg";
-import artImg9 from "../assets/img/art-img/29_devdusawar.jpg";
 import artImg10 from "../assets/img/art-img/30_tvenkanna.jpg";
-
-import artImgBig from "../assets/img/art-img/25_uaymondalBig.jpg";
+import { useMediaQuery } from 'react-responsive';
 
 export const Home = () => {
+
+    const isMobile = useMediaQuery({ query: '(max-width: 991px)' });
+  const isDesktop = useMediaQuery({ query: '(min-width: 992px)' });
 
     const [leftWallData, setLeftWallData] = useState([])
     const [rightWallData, setRightWallData] = useState([])
@@ -37,20 +30,21 @@ export const Home = () => {
     }
     const sideWall = [
         {
-            url: require('../assets/img/art-img/25_uaymondalBig.jpg')
-        },
-        {
             url: require('../assets/img/art-img/26_NikunjPatel.jpg')
         },
         {
-            url: require('../assets/img/art-img/25_uaymondalBig.jpg')
+            url: require('../assets/img/art-img/27_HeeralTrivedi1.jpg')
         },
         {
-            url: require('../assets/img/art-img/25_uaymondalBig.jpg')
+            url: require('../assets/img/art-img/28_Heeral Trivedi2.jpg')
+        },
+        {
+            url: require('../assets/img/art-img/29_devdusawar.jpg')
         }
     ]
     return (
         <React.Fragment>
+           {isDesktop && (  
             <section className="main-img">
                 <p className="detail">Click on artwork for details</p>
                 <div className="container-fluid">
@@ -71,8 +65,8 @@ export const Home = () => {
                                 <h4>Curatorial Note</h4>
                             </div>
                         </div>
-                        <div className="col-lg-7 col-12">
-                            <div className="row pers-one">
+                        <div className="col-lg-7 col-12 ">
+                            <div className="row padding-lg-screen pers-one ">
                                 <div className="col-lg-8 col-12">
                                     <div className="row flex-row">
                                         {/* <div className="col-lg-2 col-md-4 col-12 d-flex flex-column"> */}
@@ -114,7 +108,7 @@ export const Home = () => {
                             </div>
                         </div>
                         <div className="col-lg-1 col-12">
-                <div className="row pers-two">
+                <div className="row padding-lg-screen pers-two">
                     {sideWall.map((item, index)=> (
                         <div className="col-lg-12" key={index}>
                         <div className="side-img-sm">
@@ -127,12 +121,12 @@ export const Home = () => {
                 </div>
             </div>
             <div className="col-lg-2 col-12">
-                <div className="row pers-three">
+                <div className="row padding-lg-screen pers-three">
                     <div className="col-lg-12">
                         <div className="wall-img">
-                            <a href="inner-page.html" className="img-link">
+                            <Link to="/" className="img-link">
                                 <img src={artImg10} className="w-100" alt=""/>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -140,6 +134,14 @@ export const Home = () => {
                     </div>
                 </div>
             </section>
+            )}
+
+
+            {isMobile && (
+                <div>
+                    Hiii
+                </div>
+            )}
         </React.Fragment>
     );
 };

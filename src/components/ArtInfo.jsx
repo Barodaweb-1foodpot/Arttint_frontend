@@ -64,7 +64,7 @@ export const ArtInfo = () => {
                          
                        </div>
                        <h5 className="sub-heading">
-                         <i>{data.artName}</i>, {data.year}
+                         <i>{data.artName}</i>,<span> {data.year}</span>
                        </h5>
                        <p>{data.artType}</p>
                        <p>{data.size}</p>

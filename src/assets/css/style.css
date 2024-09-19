@@ -96,7 +96,7 @@ align-items: center;
 
 .banner-text h4 {
     color: #fff;
-    font-family: Angelyta;
+    font-family: AcryleScript;
     font-weight: 400;
     font-size: 40px;
     position: absolute;
@@ -154,7 +154,7 @@ p.detail {
 }
 .inner-heading h4 {
     color: #fff;
-    font-family: Angelyta;
+    font-family: AcryleScript;
     font-weight: 400;
     font-size: 30px;
     position: absolute;
@@ -211,6 +211,8 @@ p.detail {
     font-size: 18px;
     border-radius: 5px;
     font-weight: 600;
+    color: #fff;
+    border: 0;
 }
 
  .bottom-txt{
