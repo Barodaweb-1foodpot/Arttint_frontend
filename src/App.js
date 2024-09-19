@@ -16,7 +16,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/art-inner-page/:id" element={<ArtInfo />} />
+          <Route path="/:url" element={<ArtInfo />} />
         </Routes>
       </BrowserRouter>
     </div>
