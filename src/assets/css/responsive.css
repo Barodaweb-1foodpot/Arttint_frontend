@@ -32,12 +32,14 @@
         margin-top: 40px;
     }
     .logo-left img {
-        max-height: 35px;
+        max-height: 45px;
     }
     .logo-right img {
-        max-height: 50px;
+        max-height: 70px;
     }
-
+    .header {
+        height: 15vh;
+    }
     .header-logo{
         align-items: center;
     }

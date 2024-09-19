@@ -276,3 +276,56 @@ padding-right: 20px;
 .pers-three .wall-img .img-link:hover img {
     transform: scale(1.05);
 }
+
+.mob-area .main-area {
+    position: relative;
+}
+
+.mob-area .main-area .content{
+    position: absolute;
+    top:0;
+    padding: 30px 20px;
+    width: 100%;
+}
+.mob-area .main-area .content .heading-text{
+    text-align: left;
+}
+.mob-area .main-area .content .heading-text h3 {
+    font-family: impact;
+    letter-spacing: 4px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 30px;
+    color: #000;
+}
+
+.mob-area .main-area .content .heading-text h4 {
+    color: #fff;
+    font-family: AcryleScript;
+    font-weight: 400;
+    font-size: 42px;
+    position: absolute;
+    top: 18%;
+    left: 11%;
+}
+
+.mob-area .main-area .content .heading-text p {
+    font-size: 18px;
+    line-height: normal;
+    font-weight: 500;
+    color: #000;
+}
+
+.mob-area .curator-btn {
+    background: #000;
+    position: relative;
+    padding: 4px 23px 4px 10px;
+    right: -25px;
+    border-radius: 5px;
+}
+.mob-area .curator-btn button {
+    background: #000;
+    color: #fff;
+    border: 0;
+    padding: 0;
+}
