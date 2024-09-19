@@ -1,152 +1,206 @@
-@media (min-width:300px) and (max-width:575px){
+@media (min-width:300px) and (max-width:575px) {
     .banner-text h3 {
         font-size: 17px;
         line-height: 18px;
     }
+
     .banner-text h4 {
         font-size: 18px;
-        top: 9%;
+        top: 0%;
         left: 5%;
     }
+
     .banner-text p {
         font-size: 12px;
         margin: 0;
         line-height: normal;
     }
+
     .note {
         margin-top: 10px;
         width: fit-content;
     }
+
     .note h4 {
         font-size: 12px;
     }
+
     .main-img {
         background-size: contain;
     }
-    .pers-one{
-        transform: none;
-        padding-top: 30px;
+
+    .mob-area .main-area .content .heading-text {
+        position: relative;
     }
+
+    .mob-area .pers-one {
+        transform: perspective(1100px) scale(0.95) translateX(3%) rotateY(20deg);
+        padding-top: 40px;
+    }
+
+    .mob-area .pers-two {
+        transform: perspective(1100px) scale(1.2) translateX(3%) rotateY(20deg);
+        padding-top: 100px;
+    }
+
+    .mob-area .pers-three {
+        transform: perspective(1100px) scale(0.9) translateX(-11%) rotateY(-35deg);
+        padding-top: 88px;
+    }
+
+    .wall-img {
+        padding: 15px 5px 0;
+    }
+
     .banner-text {
         position: relative;
         margin-top: 40px;
     }
+
     .logo-left img {
         max-height: 45px;
     }
+
     .logo-right img {
         max-height: 70px;
     }
+
     .header {
         height: 15vh;
     }
-    .header-logo{
+
+    .header-logo {
         align-items: center;
     }
+
     p.detail {
         top: 39%;
         color: #010101;
     }
+
     .inner-padding {
         height: 100%;
     }
+
     .bottom-txt {
         position: relative;
     }
+
     .bottom-txt table td {
         padding-bottom: 15px;
         padding-right: 22px;
     }
+
     .vid-sec .videos {
         position: relative;
     }
+
     .bottom-txt table td {
         padding-bottom: 15px;
         padding-right: 22px;
     }
-    .resp-height{
+
+    .resp-height {
         height: auto;
     }
 }
 
-@media (min-width:576px) and (max-width:1023px){
+@media (min-width:576px) and (max-width:1023px) {
     .banner-text h3 {
         font-size: 28px;
         line-height: 30px;
     }
+
     .banner-text h4 {
         font-size: 28px;
         top: 9%;
         left: 5%;
     }
+
     .banner-text p {
         font-size: 12px;
         margin: 0;
         line-height: normal;
     }
+
     .note {
         margin-top: 10px;
         width: fit-content;
     }
+
     .note h4 {
         font-size: 12px;
     }
+
     .main-img {
         background-size: contain;
     }
+
     .pers-one {
         transform: translateY(155px);
         padding-top: 30px;
     }
+
     .banner-text {
         position: relative;
         margin-top: 40px;
     }
+
     .logo-left img {
         max-height: 35px;
     }
+
     .logo-right img {
         max-height: 50px;
     }
 
-    .header-logo{
+    .header-logo {
         align-items: center;
     }
+
     p.detail {
         top: 70%;
         height: fit-content;
         color: #ffffff;
     }
+
     .inner-padding {
         height: 100%;
     }
+
     .bottom-txt {
         position: relative;
     }
+
     .vid-sec .videos {
         position: relative;
     }
+
     .bottom-txt table td {
         padding-bottom: 15px;
         padding-right: 22px;
     }
-    .resp-height{
+
+    .resp-height {
         height: auto;
     }
 }
 
 
-@media (min-width:1024px) and (max-width:1240px){
-    .pers-one{
+@media (min-width:1024px) and (max-width:1240px) {
+    .pers-one {
         transform: perspective(1100px) scale(0.9) translateX(-2%) rotateY(34deg);
         padding-top: 60px;
     }
+
     p.detail {
         bottom: 45px;
     }
+
     .banner-text {
         margin-top: 30px;
     }
+
     .note {
         margin-top: 30px;
         width: fit-content;
@@ -155,121 +209,146 @@
     .main-img {
         background-size: cover;
     }
+
     .banner-text p {
         margin-top: 0;
     }
+
     .banner-text h3 {
         font-size: 32px;
         line-height: 39px;
     }
+
     .banner-text h4 {
         font-size: 32px;
         top: 14%;
         left: 5%;
     }
+
     .bottom-txt {
         position: relative;
     }
+
     .vid-sec .videos {
         position: relative;
     }
+
     .bottom-txt table td {
         padding-bottom: 15px;
         padding-right: 22px;
     }
-    .resp-height{
+
+    .resp-height {
         height: auto;
     }
 }
 
-@media  (min-width: 1241px) and (max-width:1440px){
-    .pers-one{
+@media (min-width: 1241px) and (max-width:1440px) {
+    .pers-one {
         transform: perspective(1100px) scale(0.9) translateX(0%) rotateY(35deg);
         padding-top: 110px;
     }
-    
+
 }
-@media  (min-width:1241px) and (max-width:1300px){
+
+@media (min-width:1241px) and (max-width:1300px) {
     .pers-three {
         transform: perspective(1136px) scaleX(0.23) scaleY(0.55) translateX(-72pc) rotateY(47deg);
         padding-top: 125px;
     }
 }
 
-@media  (min-width:1301px) and (max-width:1440px){
+@media (min-width:1301px) and (max-width:1440px) {
     .pers-three {
         transform: perspective(1136px) scaleX(0.23) scaleY(0.55) translateX(-80pc) rotateY(47deg);
         padding-top: 125px;
     }
 }
-@media  (min-width: 1441px) and (max-width:1699px) {
+
+@media (min-width: 1441px) and (max-width:1699px) {
     .main-img {
-        background-position: 0  -100px;
+        background-position: 0 -100px;
     }
+
     .pers-one {
         transform: perspective(1105px) scale(0.8) translateX(2%) rotateY(24deg);
         padding-top: 100px;
         padding-right: 30px;
     }
+
     .pers-three {
         transform: perspective(1136px) scaleX(0.23) scaleY(0.55) translateX(-90pc) rotateY(47deg);
         padding-top: 125px;
     }
+
     .pers-three .wall-img img {
         max-width: 80%;
     }
+
     .side-img-sm img {
         max-width: 90%;
     }
+
     .banner-text h3 {
         font-size: 56px;
         line-height: 60px;
     }
+
     .banner-text h4 {
         font-size: 60px;
         top: 8%;
     }
+
     .banner-text p {
         font-size: 18px;
         line-height: normal;
     }
+
     .logo-right {
         gap: 50px;
     }
+
     .note h4 {
         font-size: 24px;
     }
 }
 
-@media (min-width: 1700px) and (max-width: 1800px){
-    
+@media (min-width: 1700px) and (max-width: 1800px) {
+
     .pers-one {
         transform: perspective(1105px) scale(0.8) translateX(2%) rotateY(24deg);
         padding-top: 115px;
         padding-right: 30px;
     }
+
     .pers-three {
         transform: perspective(1136px) scaleX(0.23) scaleY(0.55) translateX(-97pc) translateY(70px) rotateY(58deg);
         padding-top: 125px;
     }
+
     .pers-three .wall-img img {
         max-width: 80%;
     }
+
     .main-img {
-        background-position: 0  -60px;
+        background-position: 0 -60px;
     }
+
     .banner-text h3 {
         font-size: 60px;
     }
+
     .banner-text h4 {
         font-size: 75px;
         top: 6%;
         left: 20%;
     }
+
     .banner-text p {
         font-size: 22px;
         line-height: normal;
     }
+
     .note h4 {
         font-size: 30px;
     }
@@ -280,28 +359,35 @@
         transform: perspective(1105px) scale(0.75) translateX(2%) rotateY(24deg);
         padding-top: 120px;
     }
+
     .pers-three {
         transform: perspective(1136px) scaleX(0.23) scaleY(0.55) translateX(-108.5pc) translateY(110pX) rotateY(58deg);
         padding-top: 125px;
     }
+
     .pers-three .wall-img img {
         max-width: 80%;
     }
+
     .main-img {
-        background-position: 0  -60px;
+        background-position: 0 -60px;
     }
+
     .banner-text h3 {
         font-size: 60px;
     }
+
     .banner-text h4 {
         font-size: 75px;
         top: 6%;
         left: 20%;
     }
+
     .banner-text p {
         font-size: 22px;
         line-height: normal;
     }
+
     .note h4 {
         font-size: 30px;
     }
@@ -309,91 +395,109 @@
 
 @media (min-width: 2200px) and (max-width:2500px) {
     .pers-one {
-        transform: perspective(1105px) scale(0.8) translateX(3%) translateY(7%)  rotateY(24deg);
+        transform: perspective(1105px) scale(0.8) translateX(3%) translateY(7%) rotateY(24deg);
         padding-top: 130px;
     }
+
     .pers-two {
         transform: perspective(1100px) scaleX(0.695) scaleY(0.57) translateX(-230%) rotateY(-35deg);
         padding-top: 100px;
     }
+
     .side-img-sm img {
         max-width: 90%;
     }
+
     .pers-three {
         transform: perspective(1012px) scaleX(0.8) scaleY(0.94) translateX(-33.5pc) translateY(165pX) rotateY(45deg);
     }
+
     /* .pers-three {
         transform: perspective(1047px) scaleX(0.06) scaleY(0.7) translateX(-551pc) translateY(187pX) rotateY(71deg);
     } */
     .pers-three .wall-img img {
         max-width: 70%;
     }
+
     .banner-text h3 {
         font-size: 72px;
         line-height: 79px;
     }
+
     .banner-text h4 {
         font-size: 70px;
         top: 12%;
     }
+
     .banner-text p {
         font-size: 30px;
         line-height: normal;
     }
+
     p.detail {
         bottom: 90px;
         font-size: 24px;
     }
+
     .note h4 {
         font-size: 35px;
     }
+
     .main-img {
-        background-position: 0  -100px;
+        background-position: 0 -100px;
     }
+
     .note h4 {
         font-size: 30px;
     }
 }
 
-@media (min-width:2501px) and (max-width:4000px){
+@media (min-width:2501px) and (max-width:4000px) {
     .pers-one {
-        transform: perspective(1105px) scale(0.8) translateX(3%) translateY(7%)  rotateY(24deg);
+        transform: perspective(1105px) scale(0.8) translateX(3%) translateY(7%) rotateY(24deg);
         padding-top: 130px;
     }
+
     .pers-two {
         transform: perspective(1100px) scaleX(0.695) scaleY(0.57) translateX(-230%) rotateY(-35deg);
         padding-top: 100px;
     }
+
     .side-img-sm img {
         max-width: 90%;
     }
+
     .pers-three {
         transform: perspective(1012px) scaleX(0.30) scaleY(0.6) translateX(-110pc) translateY(161pX) rotateY(45deg);
     }
+
     .pers-three .wall-img img {
         max-width: 50%;
     }
+
     .main-img {
-        background-position: 0  -100px;
+        background-position: 0 -100px;
     }
+
     .banner-text h3 {
         font-size: 80px;
         line-height: 85px;
     }
+
     .banner-text h4 {
         font-size: 100px;
         top: 6%;
         left: 25%;
     }
+
     .banner-text p {
         font-size: 30px;
         line-height: normal;
     }
+
     .note h4 {
         font-size: 40px;
     }
 }
 
-@media (min-width:4001px) {
-
-}
+@media (min-width:4001px) {}

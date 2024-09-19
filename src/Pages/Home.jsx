@@ -136,7 +136,7 @@ export const Home = () => {
 
                                     ))
                                 }
-                                  {/* {rightWallData.length > 0 &&
+                                  {rightWallData.length > 0 &&
                                     rightWallData.slice(0, 4).map((items, index) => (
                                         <div className="col-lg-12" key={index}>
                                             <div className="side-img-sm" >
@@ -147,7 +147,7 @@ export const Home = () => {
                                         </div>
 
                                     ))
-                                } */}
+                                }
                 </div>
               </div>
               <div className="col-lg-2 col-12">
@@ -207,6 +207,76 @@ export const Home = () => {
                     Click on artwork for details
                     </p>
                   </div>
+                </Col>
+              </Row>
+              <Row>
+                <Col xs={7}>
+                <Row className="pers-one">
+                {leftWallData.length > 0 &&
+                        leftWallData.slice(0, 26).map((items, index) => (
+                          <Col xs={3}
+                            className="flex-column wall-img mb-2"
+                            key={index}
+                          >
+                            <Link to={`/${items.URL}`} className="img-link">
+                              <img
+                                src={`${process.env.REACT_APP_URL}/${items.artImage}`}
+                                className="w-100"
+                                alt=""
+                              />
+                            </Link>
+                          </Col>
+                        ))}
+                </Row>
+                
+                </Col>
+                <Col xs={3}>
+                <Row className="pers-two">
+
+                    <Col lg={12}>
+                    {bigImageData.length > 0 &&
+                                    bigImageData.slice(0, 1).map((items, index) => (
+                                        <div className="" key={index}>
+                                            <div className="wall-img-big big-img" >
+                                            <Link to={`/${items.URL_link}`} className="img-link">
+                                                    <img src={`${process.env.REACT_APP_URL}/${items.artImage}`} className="w-100" alt="" />
+                                                    </Link>
+                                            </div>
+                                        </div>
+
+                                    ))
+                                }
+                    </Col>
+                    <Col lg={12}>
+                    {RightWallbigImageData.length > 0 &&
+                                    RightWallbigImageData.slice(0, 1).map((items, index) => (
+                   <div className="">
+                        <div className="wall-img  pt-3 p-0">
+                            <Link to={`/${items.URL_link}`} className="img-link">
+                                <img src={`${process.env.REACT_APP_URL}/${items.artImage}`} className="w-100" alt=""/>
+                            </Link>
+                        </div>
+                    </div> 
+                     ))
+                    }
+                    </Col>
+                </Row>
+                </Col>
+                <Col xs={2}>
+                <Row className="pers-three">
+                {rightWallData.length > 0 &&
+                                    rightWallData.slice(0, 4).map((items, index) => (
+                                        <Col xs={12} key={index}>
+                                            <div className="side-img-sm" >
+                                            <Link to={`/${items.URL}`} className="img-link">
+                                                    <img src={`${process.env.REACT_APP_URL}/${items.artImage}`} className="w-100" alt="" />
+                                                    </Link>
+                                            </div>
+                                        </Col>
+
+                                    ))
+                                }
+                </Row>
                 </Col>
               </Row>
             </div>
