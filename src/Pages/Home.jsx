@@ -13,57 +13,58 @@ export const Home = () => {
   const [leftWallData, setLeftWallData] = useState([]);
   const [rightWallData, setRightWallData] = useState([]);
   const [bigImageData, setBigImageData] = useState([]);
+    const [RightWallbigImageData, setrightWallBigImageData] = useState([])
 
   useEffect(() => {
     fetchData();
   }, []);
 
-  const fetchData = async () => {
-    const res = await axios.get(
-      `${process.env.REACT_APP_URL}/api/auth/list/ArtPiece`
-    );
-    console.log(res.data);
-    const temp = res.data.filter((item) => item.category === "leftsidewall");
-    const temp2 = res.data.filter((item) => item.category === "bigImage");
-    const temp3 = res.data.filter((item) => item.category === "rightsidewall");
-    console.log(temp);
-    setBigImageData(temp2);
-    setLeftWallData(temp);
-    setRightWallData(temp3);
-  };
-  const sideWall = [
-    {
-      url: require("../assets/img/art-img/26_NikunjPatel.jpg"),
-    },
-    {
-      url: require("../assets/img/art-img/27_HeeralTrivedi1.jpg"),
-    },
-    {
-      url: require("../assets/img/art-img/28_Heeral Trivedi2.jpg"),
-    },
-    {
-      url: require("../assets/img/art-img/29_devdusawar.jpg"),
-    },
-  ];
-  return (
-    <React.Fragment>
-      {isDesktop && (
-        <section className="main-img">
-          <p className="detail">Click on artwork for details</p>
-          <div className="container-fluid">
-            <div className="row justify-content-center">
-              <div className="col-lg-2 col-md-4 col-12 align-content-center">
-                <div className="banner-text">
-                  <h3>
-                    ORIGINAL <br /> AUTHENTIC
-                  </h3>
-                  <h4>paintings</h4>
-                  <p className="text-start">
-                    8th Sep to 7th Dec
-                    <br />
-                    Hyatt Palace, Vadodara
-                  </p>
-                </div>
+    const fetchData = async () => {
+        const res = await axios.get(`${process.env.REACT_APP_URL}/api/auth/list/ArtPiece`)
+        console.log(res.data)
+        const temp = res.data.filter((item => item.category === 'leftsidewall'))
+        const temp2 = res.data.filter((item => item.category === 'bigImage'))
+        const temp3 = res.data.filter((item => item.category === 'rightsidewall'))
+        const temp4 = res.data.filter((item => item.category === 'rightsidewallBigImage'))
+
+        console.log(temp)
+        setBigImageData(temp2)
+        setLeftWallData(temp)
+        setRightWallData(temp3)
+        setrightWallBigImageData(temp4)
+    }
+    const sideWall = [
+        {
+            url: require('../assets/img/art-img/26_NikunjPatel.jpg')
+        },
+        {
+            url: require('../assets/img/art-img/27_HeeralTrivedi1.jpg')
+        },
+        {
+            url: require('../assets/img/art-img/28_Heeral Trivedi2.jpg')
+        },
+        {
+            url: require('../assets/img/art-img/29_devdusawar.jpg')
+        }
+    ]
+    return (
+        <React.Fragment>
+           {isDesktop && (  
+            <section className="main-img">
+                <p className="detail">Click on artwork for details</p>
+                <div className="container-fluid">
+                    <div className="row justify-content-center">
+                        <div className="col-lg-2 col-md-4 col-12 align-content-center">
+                            <div className="banner-text">
+                                <h3>
+                                    ORIGINAL <br /> AUTHENTIC
+                                </h3>
+                                <h4>paintings</h4>
+                                <p className="text-start">
+                                    8th Sep to 7th Dec<br />
+                                    Hyatt Palace, Vadodara
+                                </p>
+                            </div>
 
                 <div className="note">
                   <h4>Curatorial Note</h4>
@@ -90,51 +91,78 @@ export const Home = () => {
                           </div>
                         ))}
 
-                      {/* </div> */}
-                      <div className="col-lg-2 col-md-4 col-12 d-flex flex-column">
-                        {/* Add more images here if needed */}
-                      </div>
-                      {/* Add more columns here if needed */}
-                    </div>
-                  </div>
-                  {bigImageData.length > 0 &&
-                    bigImageData.slice(0, 1).map((items, index) => (
-                      <div className="col-lg-4 col-12" key={index}>
-                        <div className="wall-img-big big-img">
-                          <Link to={`/${items.URL}`} className="img-link">
-                            <img
-                              src={`${process.env.REACT_APP_URL}/${items.artImage}`}
-                              className="w-100"
-                              alt=""
-                            />
-                          </Link>
+                                        {/* </div> */}
+                                        <div className="col-lg-2 col-md-4 col-12 d-flex flex-column">
+                                            {/* Add more images here if needed */}
+                                        </div>
+                                        {/* Add more columns here if needed */}
+                                    </div>
+                                </div>
+                                {bigImageData.length > 0 &&
+                                    bigImageData.slice(0, 1).map((items, index) => (
+                                        <div className="col-lg-4 col-12" key={index}>
+                                            <div className="wall-img-big big-img" >
+                                            <Link to={`/${items.URL_link}`} className="img-link">
+                                                    <img src={`${process.env.REACT_APP_URL}/${items.artImage}`} className="w-100" alt="" />
+                                                    </Link>
+                                            </div>
+                                        </div>
+
+                                    ))
+                                }
+
+                            </div>
                         </div>
-                      </div>
-                    ))}
-                </div>
-              </div>
-              <div className="col-lg-1 col-12">
+                        <div className="col-lg-1 col-12">
                 <div className="row padding-lg-screen pers-two">
-                  {sideWall.map((item, index) => (
-                    <div className="col-lg-12" key={index}>
-                      <div className="side-img-sm">
-                        <Link to="/" className="img-link">
-                          <img src={item.url} className="w-100" alt="" />
-                        </Link>
-                      </div>
+                    {/* {sideWall.map((item, index)=> (
+                        <div className="col-lg-12" key={index}>
+                        <div className="side-img-sm">
+                            <Link to="/" className="img-link">
+                            <img src={item.url} className="w-100" alt=""/>
+                            </Link>
+                        </div>
                     </div>
-                  ))}
+                    ))} */}
+                     {rightWallData.length > 0 &&
+                                    rightWallData.slice(0, 4).map((items, index) => (
+                                        <div className="col-lg-12" key={index}>
+                                            <div className="side-img-sm" >
+                                            <Link to={`/${items.URL_link}`} className="img-link">
+                                                    <img src={`${process.env.REACT_APP_URL}/${items.artImage}`} className="w-100" alt="" />
+                                                    </Link>
+                                            </div>
+                                        </div>
+
+                                    ))
+                                }
+                                  {/* {rightWallData.length > 0 &&
+                                    rightWallData.slice(0, 4).map((items, index) => (
+                                        <div className="col-lg-12" key={index}>
+                                            <div className="side-img-sm" >
+                                            <Link to={`/${items.URL}`} className="img-link">
+                                                    <img src={`${process.env.REACT_APP_URL}/${items.artImage}`} className="w-100" alt="" />
+                                                    </Link>
+                                            </div>
+                                        </div>
+
+                                    ))
+                                } */}
                 </div>
               </div>
               <div className="col-lg-2 col-12">
                 <div className="row padding-lg-screen pers-three">
-                  <div className="col-lg-12">
-                    <div className="wall-img">
-                      <Link to="/" className="img-link">
-                        <img src={artImg10} className="w-100" alt="" />
-                      </Link>
-                    </div>
-                  </div>
+                {RightWallbigImageData.length > 0 &&
+                                    RightWallbigImageData.slice(0, 1).map((items, index) => (
+                   <div className="col-lg-12">
+                        <div className="wall-img">
+                            <Link to={`/${items.URL_link}`} className="img-link">
+                                <img src={`${process.env.REACT_APP_URL}/${items.artImage}`} className="w-100" alt=""/>
+                            </Link>
+                        </div>
+                    </div> 
+                     ))
+                    }
                 </div>
               </div>
             </div>
