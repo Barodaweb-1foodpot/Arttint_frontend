@@ -1,0 +1,140 @@
+import React from "react";
+import { Label, Row, Form, Input, Col, Button } from "reactstrap";
+import { useFormik } from "formik";
+import * as Yup from "yup"; // For validation schema
+import axios from "axios";
+import { toast, ToastContainer } from "react-toastify";
+
+export const Inquiry = (props) => {
+    console.log(props.id)
+  // Initial values
+  const initialValues = {
+    name: "",
+    phone: "",
+    email: "",
+    countryCode: "",
+    desc: "",
+    isActive: true,
+    artName:props.id
+  };
+
+  // Validation schema using Yup
+  const validationSchema = Yup.object({
+    name: Yup.string()
+      .min(2, "Name must be at least 2 characters")
+      .required("Name is required"),
+    phone: Yup.string()
+      .matches(/^[0-9]+$/, "Phone number must contain only digits")
+      .min(10, "Phone number must be at least 10 digits")
+      .required("Phone number is required"),
+    email: Yup.string().email("Invalid email format").required("Email is required"),
+    countryCode: Yup.string()
+      .matches(/^\+[0-9]{1,4}$/, "Invalid country code, e.g., +91")
+      .required("Country code is required"),
+  });
+
+  // Formik Hook
+  const formik = useFormik({
+    initialValues,
+    validationSchema, // Add validation schema here
+    onSubmit: (values) => {
+      console.log("Submitted Values:", values);
+      axios.post(`${process.env.REACT_APP_URL}/api/auth/create/Inquiry`,values).then((res)=>{
+        console.log(res)
+        if(res.data.isOk)
+        {
+            alert(res.data.message)
+            props.setInquiryModel(false)
+        }
+      })
+
+    },
+  });
+
+  return (
+    <div>
+        <ToastContainer />
+      <Form onSubmit={formik.handleSubmit}>
+        <div>
+          <Row>
+            <Col>
+              <Label>Name</Label>
+              <Input
+                name="name"
+                value={formik.values.name}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                placeholder="Please Enter your Name"
+              />
+              {formik.touched.name && formik.errors.name ? (
+                <div className="text-danger">{formik.errors.name}</div>
+              ) : null}
+            </Col>
+            <Col>
+              <Label>Email Id</Label>
+              <Input
+                name="email"
+                value={formik.values.email}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                placeholder="Please Enter your Email Id"
+              />
+              {formik.touched.email && formik.errors.email ? (
+                <div className="text-danger">{formik.errors.email}</div>
+              ) : null}
+            </Col>
+          </Row>
+
+          <Row>
+            <Col>
+              <Label>Country Code</Label>
+              <Input
+                name="countryCode"
+                value={formik.values.countryCode}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                placeholder="ISD Code (e.g., +91)"
+              />
+              {formik.touched.countryCode && formik.errors.countryCode ? (
+                <div className="text-danger">{formik.errors.countryCode}</div>
+              ) : null}
+            </Col>
+            <Col>
+              <Label>Contact Number</Label>
+              <Input
+                type="number"
+                name="phone"
+                value={formik.values.phone}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                placeholder="Please Enter your Contact Number"
+              />
+              {formik.touched.phone && formik.errors.phone ? (
+                <div className="text-danger">{formik.errors.phone}</div>
+              ) : null}
+            </Col>
+          </Row>
+
+          <Row>
+            <Col>
+              <Label>Description</Label>
+              <Input
+                type="text"
+                name="desc"
+                value={formik.values.desc}
+                onChange={formik.handleChange}
+                placeholder="Description"
+              />
+            </Col>
+          </Row>
+        </div>
+
+        <div>
+          <Row>
+            <Button type="submit">Submit Inquiry</Button>
+          </Row>
+        </div>
+      </Form>
+    </div>
+  );
+};

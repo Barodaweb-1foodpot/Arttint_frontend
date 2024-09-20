@@ -5,6 +5,9 @@ import artAns from "../assets/img/art-answers.png";
 import hyatt from "../assets/img/hyatt-logo.png";
 import { useParams } from "react-router-dom";
 import img1 from '../assets/img/art-img/18_RahulMukharjee.jpg'
+import { Inquiry } from "./InquiryForm";
+import { Button ,Modal} from "react-bootstrap";
+import { toast, ToastContainer } from "react-toastify";
 
 export const ArtInfo = () => {
   const { url } = useParams();
@@ -21,8 +24,11 @@ export const ArtInfo = () => {
     setData(res.data)
   }
 
+  const [inquiryModel, setInquiryModel] = useState(false)
+
   return (
     <React.Fragment>
+      {/* <ToastContainer /> */}
       <section className="dark-bg inner-padding text-start">
         <div className="container-fluid h-100">
             {data &&
@@ -70,9 +76,9 @@ export const ArtInfo = () => {
                        <p>{data.size}</p>
                        <div className="price">
                          <h4>INR: {data.price}</h4>
-                         <button type="button" className="btn-buy">
+                         <Button type="button" onClick={() => setInquiryModel(true)} className="btn-buy">
                            Buy Artwork
-                         </button>
+                         </Button>
                        </div>
                      </div>
                      <div className="bottom-txt">
@@ -134,6 +140,19 @@ export const ArtInfo = () => {
          
         </div>
       </section>
+
+      <Modal
+  show={inquiryModel}
+  onHide={() => setInquiryModel(false)} // Use an anonymous function to call setInquiryModel
+  size="xl"
+  className="video-modal"
+>
+  <Modal.Header closeButton></Modal.Header>
+  <Modal.Body>
+   <Inquiry id={data._id} setInquiryModel={setInquiryModel}/>
+  </Modal.Body>
+</Modal>
+
     </React.Fragment>
   );
 };
