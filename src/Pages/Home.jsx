@@ -62,7 +62,7 @@ export const Home = () => {
                       {leftWallData.length > 0 &&
                         leftWallData.slice(0, 26).map((items, index) => (
                           <div className="col-lg-2 flex-column wall-img mb-2" key={index}>
-                            <Link to={`/${items.URL_link}`} className="img-link">
+                            <Link to={`/artist-name/${items.URL_link}`} className="img-link">
                               <img
                                 src={`${process.env.REACT_APP_URL}/${items.artImage}`}
                                 className="w-100"
@@ -77,7 +77,7 @@ export const Home = () => {
                     bigImageData.slice(0, 1).map((items, index) => (
                       <div className="col-lg-4 col-12" key={index}>
                         <div className="wall-img-big big-img">
-                          <Link to={`/${items.URL_link}`} className="img-link">
+                          <Link to={`/artist-name/${items.URL_link}`} className="img-link">
                             <img
                               src={`${process.env.REACT_APP_URL}/${items.artImage}`}
                               className="w-100"
@@ -95,7 +95,7 @@ export const Home = () => {
                     rightWallData.slice(0, 4).map((items, index) => (
                       <div className="col-lg-12" key={index}>
                         <div className="side-img-sm">
-                          <Link to={`/${items.URL_link}`} className="img-link">
+                          <Link to={`/artist-name/${items.URL_link}`} className="img-link">
                             <img
                               src={`${process.env.REACT_APP_URL}/${items.artImage}`}
                               className="w-100"
@@ -113,7 +113,7 @@ export const Home = () => {
                     RightWallbigImageData.slice(0, 1).map((items, index) => (
                       <div className="col-lg-12" key={index}>
                         <div className="wall-img">
-                          <Link to={`/${items.URL_link}`} className="img-link">
+                          <Link to={`/artist-name/${items.URL_link}`} className="img-link">
                             <img
                               src={`${process.env.REACT_APP_URL}/${items.artImage}`}
                               className="w-100"
@@ -169,7 +169,7 @@ export const Home = () => {
                       {leftWallData.length > 0 &&
                         leftWallData.slice(0, 26).map((items, index) => (
                           <Col xs={3} className="flex-column wall-img mb-2" key={index}>
-                            <Link to={`/${items.URL}`} className="img-link">
+                            <Link to={`/artist-name/${items.URL}`} className="img-link">
                               <img
                                 src={`${process.env.REACT_APP_URL}/${items.artImage}`}
                                 className="w-100"
@@ -187,7 +187,7 @@ export const Home = () => {
                           bigImageData.slice(0, 1).map((items, index) => (
                             <div className="" key={index}>
                               <div className="wall-img-big big-img">
-                                <Link to={`/${items.URL_link}`} className="img-link">
+                                <Link to={`/artist-name/${items.URL_link}`} className="img-link">
                                   <img
                                     src={`${process.env.REACT_APP_URL}/${items.artImage}`}
                                     className="w-100"
@@ -203,7 +203,7 @@ export const Home = () => {
                           RightWallbigImageData.slice(0, 1).map((items, index) => (
                             <div className="">
                               <div className="wall-img pt-3 p-0">
-                                <Link to={`/${items.URL_link}`} className="img-link">
+                                <Link to={`/artist-name/${items.URL_link}`} className="img-link">
                                   <img
                                     src={`${process.env.REACT_APP_URL}/${items.artImage}`}
                                     className="w-100"
@@ -222,7 +222,7 @@ export const Home = () => {
                         rightWallData.slice(0, 4).map((items, index) => (
                           <Col xs={12} key={index}>
                             <div className="side-img-sm">
-                              <Link to={`/${items.URL}`} className="img-link">
+                              <Link to={`/artist-name/${items.URL}`} className="img-link">
                                 <img
                                   src={`${process.env.REACT_APP_URL}/${items.artImage}`}
                                   className="w-100"
