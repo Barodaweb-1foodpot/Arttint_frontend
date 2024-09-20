@@ -1,3 +1,14 @@
+@media (min-width:300px) and (max-width:400px){
+    .mob-area .pers-one {
+        transform: perspective(1100px) scale(1) translateX(-1%) rotateY(35deg);
+        padding-top: 25px;
+    }
+}
+@media (min-width:401px) and (max-width:575px){
+    .mob-area .pers-one {
+        padding-top: 40px;
+    }
+}
 @media (min-width:300px) and (max-width:575px) {
     .banner-text h3 {
         font-size: 17px;
@@ -33,10 +44,7 @@
         position: relative;
     }
 
-    .mob-area .pers-one {
-        transform: perspective(1100px) scale(0.95) translateX(3%) rotateY(20deg);
-        padding-top: 40px;
-    }
+  
 
     .mob-area .pers-two {
         transform: perspective(1100px) scale(1.2) translateX(3%) rotateY(20deg);
@@ -59,10 +67,12 @@
 
     .logo-left img {
         max-height: 45px;
+        width: auto !important;
     }
 
     .logo-right img {
         max-height: 70px;
+        width: auto !important;
     }
 
     .header {
@@ -105,7 +115,7 @@
     }
 }
 
-@media (min-width:576px) and (max-width:1023px) {
+@media (min-width:576px) and (max-width:767px) {
     .banner-text h3 {
         font-size: 28px;
         line-height: 30px;
@@ -186,10 +196,9 @@
     }
 }
 
-
-@media (min-width:1024px) and (max-width:1240px) {
+@media (min-width:768px) and (max-width:1023px) {
     .pers-one {
-        transform: perspective(1100px) scale(0.9) translateX(-2%) rotateY(34deg);
+        transform: perspective(1100px) scale(1.1) translateX(2%) rotateY(34deg);
         padding-top: 60px;
     }
 
@@ -215,20 +224,29 @@
     }
 
     .banner-text h3 {
-        font-size: 32px;
-        line-height: 39px;
+        font-size: 20px;
+        line-height: normal;
     }
 
     .banner-text h4 {
-        font-size: 32px;
-        top: 14%;
-        left: 5%;
+        font-size: 35px;
+        top: 1%;
+        left: 21%;
     }
-
+    .note h4 {
+        font-size: 12px;
+    }
+    .note {
+        left: -24px;
+        padding: 4px 10px 4px 7px;
+    }
     .bottom-txt {
         position: relative;
     }
-
+    .banner-text p {
+        font-size: 12px;
+        line-height: normal;
+    }
     .vid-sec .videos {
         position: relative;
     }
@@ -237,12 +255,46 @@
         padding-bottom: 15px;
         padding-right: 22px;
     }
-
+    .tab-area .main-area .content .heading-text p {
+        font-size: 12px;
+        text-align: center;
+    }
     .resp-height {
         height: auto;
     }
+    .wall-img {
+        padding-top: 0;
+    }
+    .pers-two {
+        transform: perspective(1100px) scale(0.4) translateY(-40%) translateX(-103%) rotateX(356deg) rotateY(44deg);
+        padding-top: 0;
+    }
+    .pers-three {
+        transform: perspective(1119px) scaleX(0.23) scaleY(0.3) translateX(-835px) translateY(-300px) rotateY(3deg);
+        padding-top: 0;
+    }
+    .wall-img {
+        padding: 0 7px;
+    }
 }
+@media (min-width:1024px) and (max-width:1241px){
+    .tab-area .pers-one {
+        padding-top: 40px;
+    }
+    .tab-area .main-area .content .heading-text {
+        position: relative;
+    }
 
+    .tab-area .pers-two {
+        transform: perspective(1100px) scale(1.2) translateX(3%) rotateY(20deg);
+        padding-top: 100px;
+    }
+
+    .tab-area .pers-three {
+        transform: perspective(1100px) scale(0.9) translateX(-11%) rotateY(-35deg);
+        padding-top: 88px;
+    }
+}
 @media (min-width: 1241px) and (max-width:1440px) {
     .pers-one {
         transform: perspective(1100px) scale(0.9) translateX(0%) rotateY(35deg);
