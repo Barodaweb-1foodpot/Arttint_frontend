@@ -133,30 +133,7 @@ export const Home = () => {
                         </div>
                     </div>
                     ))} 
-                     {rightWallData.length > 0 &&
-                                    rightWallData.slice(0, 4).map((items, index) => (
-                                        <div className="col-lg-12" key={index}>
-                                            <div className="side-img-sm" >
-                                            <Link to={`/${items.URL_link}`} className="img-link">
-                                                    <img src={`${process.env.REACT_APP_URL}/${items.artImage}`} className="w-100" alt="" />
-                                                    </Link>
-                                            </div>
-                                        </div>
-
-                                    ))
-                                }
-                                  {rightWallData.length > 0 &&
-                                    rightWallData.slice(0, 4).map((items, index) => (
-                                        <div className="col-lg-12" key={index}>
-                                            <div className="side-img-sm" >
-                                            <Link to={`/${items.URL}`} className="img-link">
-                                                    <img src={`${process.env.REACT_APP_URL}/${items.artImage}`} className="w-100" alt="" />
-                                                    </Link>
-                                            </div>
-                                        </div>
-
-                                    ))
-                                }
+                  
                 </div>
               </div>
               <div className="col-lg-2 col-12">
