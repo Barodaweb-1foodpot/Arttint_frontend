@@ -6,11 +6,30 @@ import mobBg from "../assets/img/mobile-bg.jpg";
 import bg from "../assets/img/bg-wall.jpg";
 import { useMediaQuery } from "react-responsive";
 import { Row, Col, Container } from "react-bootstrap";
+import pdf from '../assets/img/pdf.png'
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+import pdfFile from "../assets/dummy.pdf"
+import { IoIosContact } from "react-icons/io";
+import { IoCall } from "react-icons/io5";
+import { IoMdMail } from "react-icons/io";
+import { RiWhatsappFill } from "react-icons/ri";
 
 export const Home = () => {
+
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  const [contact, setcontact] = useState(false);
+
+  const handleCloseContact = () => setcontact(false);
+  const handleShowContact = () => setcontact(true);
+
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
-  const isTablet = useMediaQuery({ query: '(min-width: 768px) and (max-width: 1023px)' });
-  const isDesktop = useMediaQuery({ query: '(min-width: 1024px)' });
+  const isTablet = useMediaQuery({ query: '(min-width: 768px) and (max-width: 1022px)' });
+  const isDesktop = useMediaQuery({ query: '(min-width: 1023px)' });
 
   const [leftWallData, setLeftWallData] = useState([]);
   const [rightWallData, setRightWallData] = useState([]);
@@ -56,7 +75,7 @@ export const Home = () => {
   return (
     <React.Fragment>
       {isDesktop && (
-        <section className="main-img">
+        <section className="main-img desktop-view">
           <p className="detail">Click on artwork for details</p>
           <div className="container-fluid">
             <div className="row justify-content-center">
@@ -72,9 +91,66 @@ export const Home = () => {
                     Hyatt Palace, Vadodara
                   </p>
                 </div>
-
                 <div className="note">
-                  <h4>Curatorial Note</h4>
+                  <button className="" onClick={handleShow}>
+                    <h4>Curatorial Note</h4>
+                  </button>
+                  <Modal
+                    className="curator-modal"
+                    show={show}
+                    onHide={handleClose}
+                    animation={false}
+                  >
+                    <Modal.Header closeButton className="border-0">
+                      <Modal.Title className="text-black">
+                        Contact The Curator
+                      </Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body className="text-black aller">
+                      Text Here... Text Here... Text Here... Text Here... Text
+                      Here... Text Here... Text Here... Text Here... Text
+                      Here... Text Here... Text Here... Text Here... Text
+                      Here... Text Here... Text Here... Text Here... Text
+                      Here... Text Here... Text Here... Text Here... Text
+                      Here... Text Here... Text Here... Text Here... Text
+                      Here... Text Here... Text Here... Text Here... Text
+                      Here... Text Here...
+                    </Modal.Body>
+                  </Modal>
+                </div>
+                <div className="note mt-2">
+                  <button className="" onClick={handleShowContact}>
+                    <h4>Contact Curator</h4>
+                  </button>
+
+                  <Modal
+                    className="curator-modal"
+                    show={contact}
+                    onHide={handleCloseContact}
+                    animation={false}
+                  >
+                    <Modal.Header closeButton className="border-0">
+                      <Modal.Title className="text-black">
+                        Contact Details
+                      </Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body className="text-black">
+                      <div className="con-area">
+                        <div className="list-item">
+                          <IoCall className="call" />
+                          <a href="tel:0000000000">0000000000</a>
+                        </div>
+                        <div className="list-item">
+                          <IoMdMail className="mail" />
+                          <a href="mailto:mail@gmail.com">mail@gmail.com</a>
+                        </div>
+                        <div className="list-item">
+                          <RiWhatsappFill className="whatsapp" />
+                          <a href="#">Whatsapp Us !</a>
+                        </div>
+                      </div>
+                    </Modal.Body>
+                  </Modal>
                 </div>
               </div>
               <div className="col-lg-7 col-12">
@@ -83,8 +159,14 @@ export const Home = () => {
                     <div className="row flex-row">
                       {leftWallData.length > 0 &&
                         leftWallData.slice(0, 26).map((items, index) => (
-                          <div className="col-lg-2 flex-column wall-img mb-2" key={index}>
-                            <Link to={`/artist-name/${items.URL_link}`} className="img-link">
+                          <div
+                            className="col-lg-2 flex-column wall-img mb-2"
+                            key={index}
+                          >
+                            <Link
+                              to={`/artist-name/${items.URL_link}`}
+                              className="img-link"
+                            >
                               <img
                                 src={`${process.env.REACT_APP_URL}/${items.artImage}`}
                                 className="w-100"
@@ -105,7 +187,10 @@ export const Home = () => {
                     bigImageData.slice(0, 1).map((items, index) => (
                       <div className="col-lg-4 col-12" key={index}>
                         <div className="wall-img-big big-img">
-                          <Link to={`/artist-name/${items.URL_link}`} className="img-link">
+                          <Link
+                            to={`/artist-name/${items.URL_link}`}
+                            className="img-link"
+                          >
                             <img
                               src={`${process.env.REACT_APP_URL}/${items.artImage}`}
                               className="w-100"
@@ -120,29 +205,13 @@ export const Home = () => {
               <div className="col-lg-1 col-12">
                 <div className="row padding-lg-screen pers-two">
                   {rightWallData.length > 0 &&
-                  rightWallData.slice(0, 4).map((items, index) => (
+                    rightWallData.slice(0, 4).map((items, index) => (
                       <div className="col-lg-12" key={index}>
                         <div className="side-img-sm">
-                          <Link to={`/artist-name/${items.URL_link}`} className="img-link">
-                            <img
-                              src={`${process.env.REACT_APP_URL}/${items.artImage}`}
-                              className="w-100"
-                              alt=""
-                            />
-                          </Link>
-                        </div>
-                    </div>
-                    ))} 
-                  
-                </div>
-              </div>
-              <div className="col-lg-2 col-12">
-                <div className="row padding-lg-screen pers-three">
-                  {RightWallbigImageData.length > 0 &&
-                    RightWallbigImageData.slice(0, 1).map((items, index) => (
-                      <div className="col-lg-12">
-                        <div className="wall-img">
-                          <Link to={`/artist-name/${items.URL_link}`} className="img-link">
+                          <Link
+                            to={`/artist-name/${items.URL_link}`}
+                            className="img-link"
+                          >
                             <img
                               src={`${process.env.REACT_APP_URL}/${items.artImage}`}
                               className="w-100"
@@ -154,6 +223,34 @@ export const Home = () => {
                     ))}
                 </div>
               </div>
+              <div className="col-lg-2 col-12">
+                <div className="row padding-lg-screen pers-three">
+                  {RightWallbigImageData.length > 0 &&
+                    RightWallbigImageData.slice(0, 1).map((items, index) => (
+                      <div className="col-lg-12">
+                        <div className="wall-img">
+                          <Link
+                            to={`/artist-name/${items.URL_link}`}
+                            className="img-link"
+                          >
+                            <img
+                              src={`${process.env.REACT_APP_URL}/${items.artImage}`}
+                              className="w-100"
+                              alt=""
+                            />
+                          </Link>
+                        </div>
+                      </div>
+                    ))}
+                </div>
+              </div>
+            </div>
+            <div className="modal-butn"></div>
+
+            <div className="pdf-btn">
+              <a href={pdfFile} target="_blank">
+                <img src={pdf} className="pdf" />
+              </a>
             </div>
           </div>
         </section>
@@ -179,13 +276,69 @@ export const Home = () => {
                         Hyatt Palace, Vadodara
                       </p>
                     </div>
-
                     <div className="note">
-                      <h4>Curatorial Note</h4>
+                      <button className="" onClick={handleShow}>
+                        <h4>Curatorial Note</h4>
+                      </button>
+                      <Modal
+                        className="curator-modal"
+                        show={show}
+                        onHide={handleClose}
+                        animation={false}
+                      >
+                        <Modal.Header closeButton className="border-0">
+                          <Modal.Title className="text-black">
+                            Contact The Curator
+                          </Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body className="text-black aller">
+                          Text Here... Text Here... Text Here... Text Here...
+                          Text Here... Text Here... Text Here... Text Here...
+                          Text Here... Text Here... Text Here... Text Here...
+                          Text Here... Text Here... Text Here... Text Here...
+                          Text Here... Text Here... Text Here... Text Here...
+                          Text Here... Text Here... Text Here... Text Here...
+                          Text Here... Text Here... Text Here... Text Here...
+                          Text Here... Text Here...
+                        </Modal.Body>
+                      </Modal>
+                    </div>
+                    <div className="note mt-2">
+                      <button className="" onClick={handleShowContact}>
+                        <h4>Contact Curator</h4>
+                      </button>
+
+                      <Modal
+                        className="curator-modal"
+                        show={contact}
+                        onHide={handleCloseContact}
+                        animation={false}
+                      >
+                        <Modal.Header closeButton className="border-0">
+                          <Modal.Title className="text-black">
+                            Contact Details
+                          </Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body className="text-black">
+                          <div className="con-area">
+                            <div className="list-item">
+                              <IoCall className="call" />
+                              <a href="tel:0000000000">0000000000</a>
+                            </div>
+                            <div className="list-item">
+                              <IoMdMail className="mail" />
+                              <a href="mailto:mail@gmail.com">mail@gmail.com</a>
+                            </div>
+                            <div className="list-item">
+                              <RiWhatsappFill className="whatsapp" />
+                              <a href="#">Whatsapp Us !</a>
+                            </div>
+                          </div>
+                        </Modal.Body>
+                      </Modal>
                     </div>
                   </Col>
-                  
-                
+
                   <Col md={5}>
                     <Row className="pers-one">
                       {leftWallData.length > 0 &&
@@ -195,7 +348,10 @@ export const Home = () => {
                             className="flex-column wall-img mb-2"
                             key={index}
                           >
-                            <Link to={`/${items.URL}`} className="img-link">
+                            <Link
+                              to={`/${items.URL_link}`}
+                              className="img-link"
+                            >
                               <img
                                 src={`${process.env.REACT_APP_URL}/${items.artImage}`}
                                 className="w-100"
@@ -256,7 +412,10 @@ export const Home = () => {
                         rightWallData.slice(0, 4).map((items, index) => (
                           <Col xs={12} key={index}>
                             <div className="side-img-sm">
-                              <Link to={`/${items.URL}`} className="img-link">
+                              <Link
+                                to={`/${items.URL_link}`}
+                                className="img-link"
+                              >
                                 <img
                                   src={`${process.env.REACT_APP_URL}/${items.artImage}`}
                                   className="w-100"
@@ -277,6 +436,11 @@ export const Home = () => {
               </div>
             </div>
           </Container>
+          <div className="pdf-btn">
+            <a href={pdfFile} target="_blank">
+              <img src={pdf} className="pdf" />
+            </a>
+          </div>
         </section>
       )}
       {isMobile && (
@@ -303,8 +467,65 @@ export const Home = () => {
                   </Col>
                   <Col md={5} xs={5}>
                     <div className="curator-btn">
-                      <button type="button">Curatorial Note</button>
+                      <button type="button" onClick={handleShow}>
+                        <h4>Curatorial Note</h4>
+                      </button>
+                      <Modal
+                        className="curator-modal"
+                        show={show}
+                        onHide={handleClose}
+                        animation={false}
+                      >
+                        <Modal.Header closeButton className="border-0">
+                          <Modal.Title className="text-black">
+                            Contact The Curator
+                          </Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body className="text-black aller">
+                          Text Here... Text Here... Text Here... Text Here...
+                          Text Here... Text Here... Text Here... Text Here...
+                          Text Here... Text Here... Text Here... Text Here...
+                          Text Here... Text Here... Text Here... Text Here...
+                          Text Here... Text Here... Text Here... Text Here...
+                          Text Here... Text Here... Text Here... Text Here...
+                          Text Here... Text Here... Text Here... Text Here...
+                          Text Here... Text Here...
+                        </Modal.Body>
+                      </Modal>
                     </div>
+                    <div className="curator-btn mt-3">
+                      <button type="button" onClick={handleShowContact}>
+                        <h4>Contact Curator</h4>
+                      </button>
+                    </div>
+                    <Modal
+                      className="curator-modal"
+                      show={contact}
+                      onHide={handleCloseContact}
+                      animation={false}
+                    >
+                      <Modal.Header closeButton className="border-0">
+                        <Modal.Title className="text-black">
+                          Contact Details
+                        </Modal.Title>
+                      </Modal.Header>
+                      <Modal.Body className="text-black">
+                        <div className="con-area">
+                          <div className="list-item">
+                            <IoCall className="call" />
+                            <a href="tel:0000000000">0000000000</a>
+                          </div>
+                          <div className="list-item">
+                            <IoMdMail className="mail" />
+                            <a href="mailto:mail@gmail.com">mail@gmail.com</a>
+                          </div>
+                          <div className="list-item">
+                            <RiWhatsappFill className="whatsapp" />
+                            <a href="#">Whatsapp Us !</a>
+                          </div>
+                        </div>
+                      </Modal.Body>
+                    </Modal>
                   </Col>
                   <Col md={12} xs={12}>
                     <div className="heading-text">
@@ -322,7 +543,10 @@ export const Home = () => {
                             className="flex-column wall-img mb-2"
                             key={index}
                           >
-                            <Link to={`/${items.URL}`} className="img-link">
+                            <Link
+                              to={`/${items.URL_link}`}
+                              className="img-link"
+                            >
                               <img
                                 src={`${process.env.REACT_APP_URL}/${items.artImage}`}
                                 className="w-100"
@@ -340,7 +564,10 @@ export const Home = () => {
                           bigImageData.slice(0, 1).map((items, index) => (
                             <div className="" key={index}>
                               <div className="wall-img-big big-img">
-                                <Link to={`/artist-name/${items.URL_link}`} className="img-link">
+                                <Link
+                                  to={`/artist-name/${items.URL_link}`}
+                                  className="img-link"
+                                >
                                   <img
                                     src={`${process.env.REACT_APP_URL}/${items.artImage}`}
                                     className="w-100"
@@ -380,7 +607,10 @@ export const Home = () => {
                         rightWallData.slice(0, 4).map((items, index) => (
                           <Col xs={12} key={index}>
                             <div className="side-img-sm">
-                              <Link to={`/artist-name/${items.URL}`} className="img-link">
+                              <Link
+                                to={`/artist-name/${items.URL_link}`}
+                                className="img-link"
+                              >
                                 <img
                                   src={`${process.env.REACT_APP_URL}/${items.artImage}`}
                                   className="w-100"
@@ -394,6 +624,11 @@ export const Home = () => {
                   </Col>
                 </Row>
               </div>
+            </div>
+            <div className="pdf-btn">
+              <a href={pdfFile} target="_blank">
+                <img src={pdf} className="pdf" />
+              </a>
             </div>
           </Container>
         </section>
