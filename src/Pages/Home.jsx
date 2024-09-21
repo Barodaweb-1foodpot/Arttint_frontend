@@ -349,7 +349,7 @@ export const Home = () => {
                             key={index}
                           >
                             <Link
-                              to={`/${items.URL_link}`}
+                              to={`/artist-name/${items.URL_link}`}
                               className="img-link"
                             >
                               <img
@@ -370,7 +370,7 @@ export const Home = () => {
                             <div className="" key={index}>
                               <div className="wall-img-big big-img">
                                 <Link
-                                  to={`/${items.URL_link}`}
+                                  to={`/artist-name/${items.URL_link}`}
                                   className="img-link"
                                 >
                                   <img
@@ -390,7 +390,7 @@ export const Home = () => {
                               <div className="">
                                 <div className="wall-img  pt-3 p-0">
                                   <Link
-                                    to={`/${items.URL_link}`}
+                                    to={`/artist-name/${items.URL_link}`}
                                     className="img-link"
                                   >
                                     <img
@@ -413,7 +413,7 @@ export const Home = () => {
                           <Col xs={12} key={index}>
                             <div className="side-img-sm">
                               <Link
-                                to={`/${items.URL_link}`}
+                                to={`/artist-name/${items.URL_link}`}
                                 className="img-link"
                               >
                                 <img
@@ -544,7 +544,7 @@ export const Home = () => {
                             key={index}
                           >
                             <Link
-                              to={`/${items.URL_link}`}
+                              to={`/artist-name/${items.URL_link}`}
                               className="img-link"
                             >
                               <img
@@ -585,7 +585,7 @@ export const Home = () => {
                               <div className="">
                                 <div className="wall-img  pt-3 p-0">
                                   <Link
-                                    to={`/${items.URL_link}`}
+                                    to={`/artist-name/${items.URL_link}`}
                                     className="img-link"
                                   >
                                     <img
