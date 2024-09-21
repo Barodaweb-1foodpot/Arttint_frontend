@@ -15,7 +15,7 @@ function App() {
         {/* Place Header outside of Routes */}
         <Header />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/arttint" element={<Home />} />
           <Route path="/artist-name/:url" element={<ArtInfo />} />
         </Routes>
       </BrowserRouter>
