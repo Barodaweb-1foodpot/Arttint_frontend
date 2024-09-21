@@ -66,7 +66,7 @@ export const ArtInfo = () => {
                          
                        </div>
                        <h5 className="sub-heading">
-                         <i>{data.artName}</i>,<span> {data.year}</span>
+                         <b><i>{data.artName}</i></b>,<span> {data.year}</span>
                        </h5>
                        <p>{data.artType}</p>
                        <p>{data.size}</p>
@@ -107,9 +107,9 @@ export const ArtInfo = () => {
                  <div className="col-lg-5 col-md-6 col-12">
                    <div className="vid-sec">
                     <div className="back-btn">
-                    <Link type="button" className="back-btn" to="/arttint">
+                    <a className="back-btn" href="/arttint">
                            Back
-                         </Link>
+                         </a>
                     </div>
                      <div className="videos">
                        <div className="row">
