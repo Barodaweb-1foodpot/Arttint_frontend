@@ -29,7 +29,7 @@ export const ArtInfo = () => {
   return (
     <React.Fragment>
       {/* <ToastContainer /> */}
-      <section className="dark-bg inner-padding text-start">
+      <section className="dark-bg inner-padding text-start aller">
         <div className="container-fluid h-100">
             {data &&
              <div className="row h-100">
@@ -49,7 +49,7 @@ export const ArtInfo = () => {
                      <img
                        src={`${process.env.REACT_APP_URL}/${data.artImage}`}
                     //    className="h-100"
-                       style={{width:"100%", objectFit:"cover", maxHeight:"100%" , objectPosition:"top"}}
+                       style={{width:"100%", objectFit:"cover", maxHeight:"100%" , objectPosition:"top" , paddingLeft:"20px"}}
                        alt=""
                      />
                    </div>
