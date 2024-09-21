@@ -8,17 +8,17 @@ export const Header = () => {
     return (
         <React.Fragment>
 
-            <section class="header">
+            <section class="header h-100">
                 <div class="container-fluid">
-                    <div class="d-flex justify-content-between header-logo">
-                        <div class="logo-left">
+                    <div class="d-flex justify-content-between header-logo h-100">
+                        <div class="logo-left h-100">
                             <Link to="/">
-                                <img src={mainLogo} class="w-100" alt="" />
+                                <img src={mainLogo} class="w-100 h-100" alt="" />
                            </Link>
                         </div>
-                        <div class="logo-right">
-                            <img src={artAns} class="w-100" alt="" />
-                            <img src={hyatt} class="w-100" alt="" />
+                        <div class="logo-right h-100">
+                            <img src={artAns} class="w-100 h-100" alt="" />
+                            <img src={hyatt} class="w-100 h-100" alt="" />
                         </div>
                     </div>
                 </div>
