@@ -195,7 +195,7 @@ export const Home = () => {
                             className="flex-column wall-img mb-2"
                             key={index}
                           >
-                            <Link to={`/${items.URL}`} className="img-link">
+                            <Link to={`/${items.URL_link}`} className="img-link">
                               <img
                                 src={`${process.env.REACT_APP_URL}/${items.artImage}`}
                                 className="w-100"
@@ -256,7 +256,7 @@ export const Home = () => {
                         rightWallData.slice(0, 4).map((items, index) => (
                           <Col xs={12} key={index}>
                             <div className="side-img-sm">
-                              <Link to={`/${items.URL}`} className="img-link">
+                              <Link to={`/${items.URL_link}`} className="img-link">
                                 <img
                                   src={`${process.env.REACT_APP_URL}/${items.artImage}`}
                                   className="w-100"
@@ -322,7 +322,7 @@ export const Home = () => {
                             className="flex-column wall-img mb-2"
                             key={index}
                           >
-                            <Link to={`/${items.URL}`} className="img-link">
+                            <Link to={`/${items.URL_link}`} className="img-link">
                               <img
                                 src={`${process.env.REACT_APP_URL}/${items.artImage}`}
                                 className="w-100"
@@ -380,7 +380,7 @@ export const Home = () => {
                         rightWallData.slice(0, 4).map((items, index) => (
                           <Col xs={12} key={index}>
                             <div className="side-img-sm">
-                              <Link to={`/artist-name/${items.URL}`} className="img-link">
+                              <Link to={`/artist-name/${items.URL_link}`} className="img-link">
                                 <img
                                   src={`${process.env.REACT_APP_URL}/${items.artImage}`}
                                   className="w-100"
