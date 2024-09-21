@@ -12,7 +12,7 @@ export const Header = () => {
                 <div class="container-fluid">
                     <div class="d-flex justify-content-between header-logo h-100">
                         <div class="logo-left h-100">
-                            <Link to="/">
+                            <Link to="/arttint">
                                 <img src={mainLogo} class="w-100 h-100" alt="" />
                            </Link>
                         </div>
