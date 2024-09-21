@@ -103,7 +103,7 @@ export const Home = () => {
                   >
                     <Modal.Header closeButton className="border-0">
                       <Modal.Title className="text-black">
-                        Contact The Curator
+                        Curatorial Note
                       </Modal.Title>
                     </Modal.Header>
                     <Modal.Body className="text-black aller">
@@ -288,10 +288,10 @@ export const Home = () => {
                       >
                         <Modal.Header closeButton className="border-0">
                           <Modal.Title className="text-black">
-                            Contact The Curator
+                            Curatorial Note
                           </Modal.Title>
                         </Modal.Header>
-                        <Modal.Body className="text-black aller">
+                        <Modal.Body className="text-black">
                           Text Here... Text Here... Text Here... Text Here...
                           Text Here... Text Here... Text Here... Text Here...
                           Text Here... Text Here... Text Here... Text Here...
@@ -478,7 +478,7 @@ export const Home = () => {
                       >
                         <Modal.Header closeButton className="border-0">
                           <Modal.Title className="text-black">
-                            Contact The Curator
+                            Curatorial Note
                           </Modal.Title>
                         </Modal.Header>
                         <Modal.Body className="text-black aller">

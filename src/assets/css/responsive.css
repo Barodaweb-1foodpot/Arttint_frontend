@@ -4,9 +4,29 @@
         padding-top: 25px;
     }
 }
+
+@media (min-width:300px) and (max-width:400px){
+    .mob-area .pers-one {
+        transform: perspective(1100px) scale(1) translateX(0%) translateY(12px) rotateY(23deg);
+        padding-top: 0;
+    }
+    .mob-area .main-area .content .heading-text h4 {
+        top: 3%;
+    }
+    /* .mob-area .pers-two {
+        padding-top: 50px;
+    } */
+    /* .mob-area .pers-three {
+        padding-top: 30px;
+    } */
+}
 @media (min-width:401px) and (max-width:575px){
     .mob-area .pers-one {
-        padding-top: 40px;
+        transform : perspective(1100px) scale(1) translateX(0%) translateY(12px) rotateY(23deg);
+        padding-top: 50px;
+    }
+    .mob-area .main-area .content .heading-text h4 {
+        top: 3%;
     }
 }
 @media (min-width:300px) and (max-width:575px) {

@@ -145,7 +145,7 @@
 }
 .note h4 {
     color: #fff;
-    padding: 5px 23px;
+    padding: 5px 22px;
     font-size: 18px;
     margin-bottom: 0;
 }
@@ -440,4 +440,8 @@ p.detail {
 .error-msg {
     font-size: 12px;
     padding: 5px 0 10px 0;
+}
+
+.aller {
+    font-family: Aller;
 }
