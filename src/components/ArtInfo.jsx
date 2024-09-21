@@ -107,7 +107,7 @@ export const ArtInfo = () => {
                  <div className="col-lg-5 col-md-6 col-12">
                    <div className="vid-sec">
                     <div className="back-btn">
-                    <Link type="button" className="back-btn" to="/">
+                    <Link type="button" className="back-btn" to="/arttint">
                            Back
                          </Link>
                     </div>
