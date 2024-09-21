@@ -10,14 +10,19 @@
     font-family: 'Impact';
     src: url('../../../public/impact.ttf') format('truetype');
 }
-
+@font-face {
+    font-family: Aller;
+    src: url('../../../public/Aller.ttf') format("truetype");
+  }
 .header {
     padding: 10px;
     background-color: #fff;
     height: 15vh;
     align-content: center;
 }
-
+.desktop-view {
+    overflow: hidden;
+}
 .header-logo {
     align-items: center;
 }
@@ -45,7 +50,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    height: 85vh;
+    height: 84vh;
     padding: 0 0 40px 0;
     background-position: 0 -20px;
     position: relative;
@@ -129,15 +134,19 @@
     background: #000;
     position: relative;
     left: -19px;
-    padding: 4px 23px;
     border-radius: 5px;
     height: fit-content;
 }
-
+.note button {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+}
 .note h4 {
     color: #fff;
+    padding: 5px 23px;
     font-size: 18px;
-    padding: 4px 0;
     margin-bottom: 0;
 }
 
@@ -234,6 +243,20 @@ p.detail {
     color: #fff;
     border: 0;
 }
+.back-btn , .back-btn:hover {
+    padding: 2px 5px;
+    background: #333;
+    font-size: 18px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 600;
+    color: #fff;
+    width: fit-content;
+    border: 0;
+    float: right;
+    text-decoration: 0;
+}
+
 
 .bottom-txt {
     color: #fff;
@@ -345,7 +368,7 @@ p.detail {
 .mob-area .curator-btn {
     background: #000;
     position: relative;
-    padding: 4px 23px 4px 10px;
+    padding: 4px 10px 4px 9px;
     right: -25px;
     border-radius: 5px;
 }
@@ -355,4 +378,66 @@ p.detail {
     color: #fff;
     border: 0;
     padding: 0;
+}
+
+.pdf-btn {
+    position: sticky;
+    bottom: 10%;
+    right: 20px;
+    width: fit-content;
+    margin-left: auto;
+}
+.pdf-btn .pdf{
+  max-width: 50px;
+}
+.curator-modal {
+    align-content: center;
+}
+.curator-modal .modal-content{
+  padding: 20px 30px 40px 30px ;
+}
+
+.curator-modal .modal-body{
+    padding: 0;
+}
+
+.con-area .list-item svg{
+  font-size: 20px;
+  margin-right: 10px;
+}
+.con-area .list-item svg.call{
+  fill: #1c3d7c;
+}
+.con-area .list-item svg.mail{
+  fill: #cc1313;
+}
+.con-area .list-item svg.whatsapp{
+  fill: #3ca70a;
+}
+.con-area .list-item{
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+}
+.con-area .list-item a{
+  font-size: 20px;
+  text-decoration: none;
+  color: #000;
+}
+
+.inq-modal .form-label{
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 10px;
+}
+.inq-modal  .submit-btn{
+    width: fit-content;
+    margin: 0 auto;
+}
+.inq-modal .modal-header{
+    border: 0;
+}
+.error-msg {
+    font-size: 12px;
+    padding: 5px 0 10px 0;
 }

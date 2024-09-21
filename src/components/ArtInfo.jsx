@@ -3,7 +3,7 @@ import axios from "axios";
 import mainLogo from "../assets/img/main-logo.png";
 import artAns from "../assets/img/art-answers.png";
 import hyatt from "../assets/img/hyatt-logo.png";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import img1 from '../assets/img/art-img/18_RahulMukharjee.jpg'
 import { Inquiry } from "./InquiryForm";
 import { Button ,Modal} from "react-bootstrap";
@@ -33,19 +33,15 @@ export const ArtInfo = () => {
         <div className="container-fluid h-100">
             {data &&
              <div className="row h-100">
-             <div className="col-lg-6 col-12 h-100">
+             <div className="col-lg-6 col-md-4 col-12 h-100">
                <div className="row h-100">
-                 <div className="col-lg-3 h-100">
+                 <div className="col-lg-3 col-12 col-md-12">
                    <div className="inner-heading">
                      <h3>
                        ORIGINAL <br /> AUTHENTIC
                      </h3>
                      <h4>paintings</h4>
-                     <p>
-                       8th Sep to 7th Dec
-                       <br />
-                       Hyatt Palace, Vadodara
-                     </p>
+                     
                    </div>
                  </div>
                  <div className="col-lg-9 col-12 h-100">
@@ -60,9 +56,9 @@ export const ArtInfo = () => {
                  </div>
                </div>
              </div>
-             <div className="col-lg-6 col-12">
+             <div className="col-lg-6 col-md-8 col-12">
                <div className="row h-100">
-                 <div className="col-lg-7 col-12 h-100">
+                 <div className="col-lg-7 col-md-6 col-12">
                    <div className="p-relative">
                      <div className="text-area">
                        <div className="heading">
@@ -108,8 +104,13 @@ export const ArtInfo = () => {
                    </div>
                  </div>
                
-                 <div className="col-lg-5 col-12 h-100">
+                 <div className="col-lg-5 col-md-6 col-12">
                    <div className="vid-sec">
+                    <div className="back-btn">
+                    <Link type="button" className="back-btn" to="/">
+                           Back
+                         </Link>
+                    </div>
                      <div className="videos">
                        <div className="row">
                         {data.link1 !="" && 
@@ -144,8 +145,8 @@ export const ArtInfo = () => {
       <Modal
   show={inquiryModel}
   onHide={() => setInquiryModel(false)} // Use an anonymous function to call setInquiryModel
-  size="xl"
-  className="video-modal"
+  size="md"
+  className="video-modal inq-modal"
 >
   <Modal.Header closeButton></Modal.Header>
   <Modal.Body>

@@ -66,12 +66,12 @@
     }
 
     .logo-left img {
-        max-height: 45px;
+        max-height: 30px;
         width: auto !important;
     }
 
     .logo-right img {
-        max-height: 70px;
+        max-height: 50px;
         width: auto !important;
     }
 
@@ -112,6 +112,35 @@
 
     .resp-height {
         height: auto;
+    }
+    .mob-area .curator-btn{
+        line-height: normal;
+    }
+    .mob-area .curator-btn h4 {
+        font-size: 11px;
+        margin: 0;
+        line-height: normal;
+    }
+    .modal-open{
+        padding-right: 0 !important;
+    }
+    .text-area .heading h4 {
+        margin-top: 10px;
+    }
+    .bottom-txt table tr td:first-child {
+        padding-right: 20px;
+        width: 35%;
+    }
+    .back-btn  {
+        float: none;
+        margin: 10px 0;
+    }
+    .back-btn a{
+        margin: 0;
+    }
+    .inner-heading h4 {
+        font-size: 45px;
+        top: 15%;
     }
 }
 
@@ -209,12 +238,22 @@
     .banner-text {
         margin-top: 30px;
     }
-
+    .mob-area .main-area .content .heading-text {
+        text-align: center;
+        position: absolute;
+        width: 100%;
+        bottom: 200px;
+    }
     .note {
         margin-top: 30px;
         width: fit-content;
     }
-
+    .note h4 {
+        color: #fff;
+        padding: 0;
+        font-size: 18px;
+        margin-bottom: 0;
+    }
     .main-img {
         background-size: cover;
     }
@@ -237,8 +276,8 @@
         font-size: 12px;
     }
     .note {
-        left: -24px;
-        padding: 4px 10px 4px 7px;
+        left: -23px;
+        padding: 4px 7px 4px 7px;
     }
     .bottom-txt {
         position: relative;
@@ -276,6 +315,49 @@
     .wall-img {
         padding: 0 7px;
     }
+    .back-btn  {
+        float: none;
+        margin: 10px 0;
+    }
+    .back-btn a{
+        margin: 0;
+    }
+}
+@media (min-width:800px) and (max-width:850px){
+    .pers-three {
+        transform: perspective(1119px) scaleX(0.23) scaleY(0.3) translateX(-880px) translateY(-350px) rotateY(3deg);
+        padding-top: 0;
+    }
+}
+@media (min-width:851px) and (max-width:900px){
+    .pers-three {
+        transform: perspective(1119px) scaleX(0.23) scaleY(0.3) translateX(-980px) translateY(-350px) rotateY(3deg);
+        padding-top: 0;
+    }
+}
+@media (min-width:901px) and (max-width:1022px){
+    .pers-two {
+        transform: perspective(1100px) scale(0.39) translateY(-48%) translateX(-109%) rotateX(358deg) rotateY(39deg);
+        padding-top: 0;
+    }
+    .pers-three {
+        transform: perspective(1119px) scaleX(0.23) scaleY(0.3) translateX(-1090px) translateY(-400px) rotateY(3deg);
+        padding-top: 0;
+    }
+}
+
+
+@media (min-width:1024px) and (max-width:1400px){
+    .banner-text {
+        position: relative;
+        margin-top: 60px;
+    }
+    .note{
+        margin-top: 40px;
+    }
+    .note h4{
+       font-size: 16px;
+    }
 }
 @media (min-width:1024px) and (max-width:1241px){
     .tab-area .pers-one {
@@ -294,6 +376,10 @@
         transform: perspective(1100px) scale(0.9) translateX(-11%) rotateY(-35deg);
         padding-top: 88px;
     }
+    .note h4 {
+        font-size: 14px;
+    }
+    
 }
 @media (min-width: 1241px) and (max-width:1440px) {
     .pers-one {

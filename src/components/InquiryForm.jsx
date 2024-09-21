@@ -57,8 +57,8 @@ export const Inquiry = (props) => {
       <Form onSubmit={formik.handleSubmit}>
         <div>
           <Row>
-            <Col>
-              <Label>Name</Label>
+            <Col lg={12} sm={12}>
+              <Label>Name *</Label>
               <Input
                 name="name"
                 value={formik.values.name}
@@ -67,11 +67,11 @@ export const Inquiry = (props) => {
                 placeholder="Please Enter your Name"
               />
               {formik.touched.name && formik.errors.name ? (
-                <div className="text-danger">{formik.errors.name}</div>
+                <div className="text-danger error-msg">{formik.errors.name}</div>
               ) : null}
             </Col>
-            <Col>
-              <Label>Email Id</Label>
+            <Col lg={12} sm={12}>
+              <Label>Email Id *</Label>
               <Input
                 name="email"
                 value={formik.values.email}
@@ -80,14 +80,12 @@ export const Inquiry = (props) => {
                 placeholder="Please Enter your Email Id"
               />
               {formik.touched.email && formik.errors.email ? (
-                <div className="text-danger">{formik.errors.email}</div>
+                <div className="text-danger error-msg">{formik.errors.email}</div>
               ) : null}
             </Col>
-          </Row>
-
-          <Row>
-            <Col>
-              <Label>Country Code</Label>
+         
+            <Col lg={4} sm={4}>
+              <Label>Country Code *</Label>
               <Input
                 name="countryCode"
                 value={formik.values.countryCode}
@@ -96,11 +94,11 @@ export const Inquiry = (props) => {
                 placeholder="ISD Code (e.g., +91)"
               />
               {formik.touched.countryCode && formik.errors.countryCode ? (
-                <div className="text-danger">{formik.errors.countryCode}</div>
+                <div className="text-danger error-msg">{formik.errors.countryCode}</div>
               ) : null}
             </Col>
-            <Col>
-              <Label>Contact Number</Label>
+            <Col lg={8} sm={8}>
+              <Label>Contact Number *</Label>
               <Input
                 type="number"
                 name="phone"
@@ -110,13 +108,11 @@ export const Inquiry = (props) => {
                 placeholder="Please Enter your Contact Number"
               />
               {formik.touched.phone && formik.errors.phone ? (
-                <div className="text-danger">{formik.errors.phone}</div>
+                <div className="text-danger error-msg">{formik.errors.phone}</div>
               ) : null}
             </Col>
-          </Row>
-
-          <Row>
-            <Col>
+         
+            <Col lg={12} sm={12} className="pb-3">
               <Label>Description</Label>
               <Input
                 type="text"
@@ -131,7 +127,7 @@ export const Inquiry = (props) => {
 
         <div>
           <Row>
-            <Button type="submit">Submit Inquiry</Button>
+            <Button type="submit" className="submit-btn">Submit Inquiry</Button>
           </Row>
         </div>
       </Form>
