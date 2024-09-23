@@ -40,8 +40,9 @@ export const ArtInfo = () => {
   };
   return (
     <React.Fragment>
-      {/* <ToastContainer /> */}
+     
       <section className="dark-bg inner-padding text-start aller">
+      {/* <ToastContainer /> */}
         <div className="container-fluid h-100">
           {data && (
             <div className="row h-100">
@@ -72,7 +73,7 @@ export const ArtInfo = () => {
                       /> 
                       )}
                       {isDesktop && ( 
-                         <div style={{ position: "relative", zIndex: 100000000 }}>
+                         <div style={{ position: "relative", zIndex: 10000 }}>
                          <ReactImageZoom {...imgZoom} />
                        </div>
                       )}
@@ -176,6 +177,7 @@ export const ArtInfo = () => {
       </section>
 
       <Modal
+      style={{zIndex:'100000000'}}
         show={inquiryModel}
         onHide={() => setInquiryModel(false)} // Use an anonymous function to call setInquiryModel
         size="md"

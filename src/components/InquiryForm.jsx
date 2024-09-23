@@ -25,12 +25,12 @@ export const Inquiry = (props) => {
       .required("Name is required"),
     phone: Yup.string()
       .matches(/^[0-9]+$/, "Phone number must contain only digits")
-      .min(10, "Phone number must be at least 10 digits")
+      .min(8, "Phone number must be at least 8 digits")
       .required("Phone number is required"),
     email: Yup.string().email("Invalid email format").required("Email is required"),
     countryCode: Yup.string()
       .matches(/^\+[0-9]{1,4}$/, "Invalid country code, e.g., +91")
-      .required("Country code is required"),
+      .required("ISD code is required"),
   });
 
   // Formik Hook
@@ -43,6 +43,7 @@ export const Inquiry = (props) => {
         console.log(res)
         if(res.data.isOk)
         {
+          toast.success(res.data.message)
             alert(res.data.message)
             props.setInquiryModel(false)
         }
@@ -53,7 +54,7 @@ export const Inquiry = (props) => {
 
   return (
     <div>
-        <ToastContainer />
+        {/* <ToastContainer /> */}
       <Form onSubmit={formik.handleSubmit}>
         <div>
           <Row>
@@ -71,7 +72,7 @@ export const Inquiry = (props) => {
               ) : null}
             </Col>
             <Col lg={12} sm={12}>
-              <Label>Email Id&nbsp;<span className="text-danger">*</span> </Label>
+              <Label>Email &nbsp;<span className="text-danger">*</span> </Label>
               <Input
                 name="email"
                 value={formik.values.email}
