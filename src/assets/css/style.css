@@ -254,7 +254,7 @@ p.detail {
     width: fit-content;
     border: 0;
     float: right;
-    text-decoration: 0;
+    text-decoration: none;
 }
 
 
@@ -444,4 +444,18 @@ p.detail {
 
 .aller {
     font-family: Aller;
+}
+
+.img-area img{
+    width:100% !important;
+    height: 80vh !important;
+    object-fit:cover ;
+    max-height: 100%;
+    object-position: top;
+    padding-left: 20px;
+   
+}
+
+.js-image-zoom__zoomed-area {
+    z-index: 99 !important;
 }

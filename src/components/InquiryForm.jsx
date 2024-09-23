@@ -58,7 +58,7 @@ export const Inquiry = (props) => {
         <div>
           <Row>
             <Col lg={12} sm={12}>
-              <Label>Name *</Label>
+              <Label>Name&nbsp;<span className="text-danger">*</span> </Label>
               <Input
                 name="name"
                 value={formik.values.name}
@@ -71,7 +71,7 @@ export const Inquiry = (props) => {
               ) : null}
             </Col>
             <Col lg={12} sm={12}>
-              <Label>Email Id *</Label>
+              <Label>Email Id&nbsp;<span className="text-danger">*</span> </Label>
               <Input
                 name="email"
                 value={formik.values.email}
@@ -85,7 +85,7 @@ export const Inquiry = (props) => {
             </Col>
          
             <Col lg={4} sm={4}>
-              <Label>Country Code *</Label>
+              <Label>Country Code&nbsp;<span className="text-danger">*</span> </Label>
               <Input
                 name="countryCode"
                 value={formik.values.countryCode}
@@ -98,9 +98,9 @@ export const Inquiry = (props) => {
               ) : null}
             </Col>
             <Col lg={8} sm={8}>
-              <Label>Contact Number *</Label>
+              <Label>Contact Number&nbsp;<span className="text-danger">*</span> </Label>
               <Input
-                type="number"
+                type="tel"
                 name="phone"
                 value={formik.values.phone}
                 onChange={formik.handleChange}
@@ -113,13 +113,13 @@ export const Inquiry = (props) => {
             </Col>
          
             <Col lg={12} sm={12} className="pb-3">
-              <Label>Description</Label>
+              <Label>Message</Label>
               <Input
                 type="text"
                 name="desc"
                 value={formik.values.desc}
                 onChange={formik.handleChange}
-                placeholder="Description"
+                placeholder="Message"
               />
             </Col>
           </Row>
