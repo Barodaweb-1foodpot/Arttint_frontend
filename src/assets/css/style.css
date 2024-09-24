@@ -171,7 +171,7 @@ p.detail {
     font-family: impact;
     letter-spacing: 3px;
     font-weight: 600;
-    font-size: 31px;
+    font-size: 26px;
     line-height: 41px;
     color: #313131;
 }
@@ -452,8 +452,6 @@ p.detail {
     object-fit:cover ;
     max-height: 100%;
     object-position: top;
-    padding-left: 20px;
-   
 }
 
 .js-image-zoom__zoomed-area {

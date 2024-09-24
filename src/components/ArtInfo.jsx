@@ -33,9 +33,10 @@ export const ArtInfo = () => {
 
   const [inquiryModel, setInquiryModel] = useState(false)
   const imgZoom = {
-    width: 400,
-    height: 400,
-    zoomWidth: 500,
+    width: 450,
+    height: 470,
+    // zoomWidth: 300,
+    // zoomHeight: 300,
     img: `${process.env.REACT_APP_URL}/${data.artImage}`,
   };
   return (
@@ -57,7 +58,7 @@ export const ArtInfo = () => {
                     </div>
                   </div>
                   <div className="col-lg-9 col-10 h-col">
-                    <div className="img-area h-col">
+                    <div className="img-area h-col ">
                       {/* <img
                        src={`${process.env.REACT_APP_URL}/${data.artImage}`}
                     //    className="h-100"
