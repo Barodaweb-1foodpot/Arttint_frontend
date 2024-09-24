@@ -459,3 +459,13 @@ p.detail {
 .js-image-zoom__zoomed-area {
     z-index: 99 !important;
 }
+
+.sm-screen{
+    display: none;
+}
+.lg-screen{
+    display: block;
+}
+.h-col{
+    height: 100%;
+}

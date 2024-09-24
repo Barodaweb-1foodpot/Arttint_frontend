@@ -56,8 +56,8 @@ export const ArtInfo = () => {
                       <h4>paintings</h4>
                     </div>
                   </div>
-                  <div className="col-lg-9 col-12 h-100">
-                    <div className="img-area h-100">
+                  <div className="col-lg-9 col-10 h-col">
+                    <div className="img-area h-col">
                       {/* <img
                        src={`${process.env.REACT_APP_URL}/${data.artImage}`}
                     //    className="h-100"
@@ -85,7 +85,7 @@ export const ArtInfo = () => {
               <div className="col-lg-6 col-md-8 col-12">
                 <div className="row h-100">
                   <div className="col-lg-7 col-md-6 col-12">
-                    <div className="p-relative">
+                    <div className="p-relative ">
                       <div className="text-area">
                         <div className="heading">
                           <h4>
@@ -141,7 +141,7 @@ export const ArtInfo = () => {
 
                   <div className="col-lg-5 col-md-6 col-12">
                     <div className="vid-sec">
-                      <div className="back-btn">
+                      <div className="back-btn lg-screen">
                         <a className="back-btn" href="/arttint">
                           Back
                         </a>
@@ -166,6 +166,11 @@ export const ArtInfo = () => {
                             </div>
                           )}
                         </div>
+                      </div>
+                      <div className="back-btn sm-screen">
+                        <a className="back-btn" href="/arttint">
+                          Back
+                        </a>
                       </div>
                     </div>
                   </div>

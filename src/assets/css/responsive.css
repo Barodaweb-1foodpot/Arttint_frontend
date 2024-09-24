@@ -135,6 +135,7 @@
     }
     .mob-area .curator-btn{
         line-height: normal;
+        right: 0;
     }
     .mob-area .curator-btn h4 {
         font-size: 11px;
@@ -164,9 +165,19 @@
         font-size: 45px;
         top: 15%;
     }
+    .img-area img {
+        width: 100% !important;
+        height: auto !important;
+    }
+    .sm-screen{
+        display: block;
+    }
+    .lg-screen{
+        display: none;
+    }
 }
 
-@media (min-width:576px) and (max-width:767px) {
+@media (min-width:576px) and (max-width:769px) {
     .banner-text h3 {
         font-size: 28px;
         line-height: 30px;
@@ -245,9 +256,22 @@
     .resp-height {
         height: auto;
     }
+    .img-area img {
+        height: auto !important;
+        max-height: 400px !important;
+        object-fit: contain !important;
+    }
+    .h-col{
+        height: auto !important;
+    }
+    .text-area .heading h4 {
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+    
 }
 
-@media (min-width:768px) and (max-width:1023px) {
+@media (min-width:769px) and (max-width:1023px) {
     .pers-one {
         transform: perspective(1100px) scale(1.1) translateX(2%) rotateY(34deg);
         padding-top: 60px;
@@ -303,6 +327,7 @@
     }
     .bottom-txt {
         position: relative;
+        padding-bottom: 0;
     }
     .banner-text p {
         font-size: 12px;
@@ -343,6 +368,12 @@
     }
     .back-btn a{
         margin: 0;
+    }
+    .img-area img {
+        height: auto !important;
+    }
+    .h-col{
+        height: auto !important;
     }
 }
 @media (min-width:800px) and (max-width:850px){
@@ -400,6 +431,10 @@
     }
     .note h4 {
         font-size: 14px;
+    }
+    .pers-three {
+        transform: perspective(1136px) scaleX(0.23) scaleY(0.55) translateX(-920px) rotateY(58deg);
+        padding-top: 125px;
     }
     
 }
